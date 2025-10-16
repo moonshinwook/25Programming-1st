@@ -1,6 +1,6 @@
 
 
-/*
+/* moon
 * 날짜 : 2025-10-15
 * 학습목표 : 프로그램 사용법 익히기(Visual Studio, Github, Githubdesktop), OT
 * 키워드 : 주석, 세미콜론(;), 중괄호{}, 들여쓰기
