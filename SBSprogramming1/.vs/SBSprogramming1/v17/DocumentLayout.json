@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\uBB38\uC2E0\uC6B1\\Desktop\\25Programming-1st\\SBSprogramming1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{68DA31DD-3D89-4533-9C6B-B8D5D2BF2204}|3_\uB514\uBC84\uAE45\\3_\uB514\uBC84\uAE45.vcxproj|C:\\Users\\\uBB38\uC2E0\uC6B1\\Desktop\\25Programming-1st\\SBSprogramming1\\3_\uB514\uBC84\uAE45\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{68DA31DD-3D89-4533-9C6B-B8D5D2BF2204}|3_\uB514\uBC84\uAE45\\3_\uB514\uBC84\uAE45.vcxproj|solutionrelative:3_\uB514\uBC84\uAE45\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.c",
+              "DocumentMoniker": "C:\\Users\\\uBB38\uC2E0\uC6B1\\Desktop\\25Programming-1st\\SBSprogramming1\\3_\uB514\uBC84\uAE45\\main.c",
+              "RelativeDocumentMoniker": "3_\uB514\uBC84\uAE45\\main.c",
+              "ToolTip": "C:\\Users\\\uBB38\uC2E0\uC6B1\\Desktop\\25Programming-1st\\SBSprogramming1\\3_\uB514\uBC84\uAE45\\main.c",
+              "RelativeToolTip": "3_\uB514\uBC84\uAE45\\main.c",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-10-17T10:46:29.53Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
