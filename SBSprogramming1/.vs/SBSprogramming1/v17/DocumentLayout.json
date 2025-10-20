@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\\uBB38\uC2E0\uC6B1\\Desktop\\25Programming-1st\\SBSprogramming1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{68DA31DD-3D89-4533-9C6B-B8D5D2BF2204}|3_\uB514\uBC84\uAE45\\3_\uB514\uBC84\uAE45.vcxproj|C:\\Users\\\uBB38\uC2E0\uC6B1\\Desktop\\25Programming-1st\\SBSprogramming1\\3_\uB514\uBC84\uAE45\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{68DA31DD-3D89-4533-9C6B-B8D5D2BF2204}|3_\uB514\uBC84\uAE45\\3_\uB514\uBC84\uAE45.vcxproj|solutionrelative:3_\uB514\uBC84\uAE45\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{FE2E3627-D8D2-4074-9C44-698824DA965D}|4_\uC804\uCC98\uB9AC\uAE30\uC640 \uB9C1\uD0B9\uACFC\uC815\\4_\uC804\uCC98\uB9AC\uAE30\uC640 \uB9C1\uD0B9\uACFC\uC815.vcxproj|C:\\Users\\\uBB38\uC2E0\uC6B1\\Desktop\\25Programming-1st\\SBSprogramming1\\4_\uC804\uCC98\uB9AC\uAE30\uC640 \uB9C1\uD0B9\uACFC\uC815\\4_main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FE2E3627-D8D2-4074-9C44-698824DA965D}|4_\uC804\uCC98\uB9AC\uAE30\uC640 \uB9C1\uD0B9\uACFC\uC815\\4_\uC804\uCC98\uB9AC\uAE30\uC640 \uB9C1\uD0B9\uACFC\uC815.vcxproj|solutionrelative:4_\uC804\uCC98\uB9AC\uAE30\uC640 \uB9C1\uD0B9\uACFC\uC815\\4_main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE2E3627-D8D2-4074-9C44-698824DA965D}|4_\uC804\uCC98\uB9AC\uAE30\uC640 \uB9C1\uD0B9\uACFC\uC815\\4_\uC804\uCC98\uB9AC\uAE30\uC640 \uB9C1\uD0B9\uACFC\uC815.vcxproj|C:\\Users\\\uBB38\uC2E0\uC6B1\\Desktop\\25Programming-1st\\SBSprogramming1\\4_\uC804\uCC98\uB9AC\uAE30\uC640 \uB9C1\uD0B9\uACFC\uC815\\Gameinfo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FE2E3627-D8D2-4074-9C44-698824DA965D}|4_\uC804\uCC98\uB9AC\uAE30\uC640 \uB9C1\uD0B9\uACFC\uC815\\4_\uC804\uCC98\uB9AC\uAE30\uC640 \uB9C1\uD0B9\uACFC\uC815.vcxproj|solutionrelative:4_\uC804\uCC98\uB9AC\uAE30\uC640 \uB9C1\uD0B9\uACFC\uC815\\Gameinfo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Gameinfo.h",
+              "DocumentMoniker": "C:\\Users\\\uBB38\uC2E0\uC6B1\\Desktop\\25Programming-1st\\SBSprogramming1\\4_\uC804\uCC98\uB9AC\uAE30\uC640 \uB9C1\uD0B9\uACFC\uC815\\Gameinfo.h",
+              "RelativeDocumentMoniker": "4_\uC804\uCC98\uB9AC\uAE30\uC640 \uB9C1\uD0B9\uACFC\uC815\\Gameinfo.h",
+              "ToolTip": "C:\\Users\\\uBB38\uC2E0\uC6B1\\Desktop\\25Programming-1st\\SBSprogramming1\\4_\uC804\uCC98\uB9AC\uAE30\uC640 \uB9C1\uD0B9\uACFC\uC815\\Gameinfo.h",
+              "RelativeToolTip": "4_\uC804\uCC98\uB9AC\uAE30\uC640 \uB9C1\uD0B9\uACFC\uC815\\Gameinfo.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-20T14:22:28.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "main.c",
-              "DocumentMoniker": "C:\\Users\\\uBB38\uC2E0\uC6B1\\Desktop\\25Programming-1st\\SBSprogramming1\\3_\uB514\uBC84\uAE45\\main.c",
-              "RelativeDocumentMoniker": "3_\uB514\uBC84\uAE45\\main.c",
-              "ToolTip": "C:\\Users\\\uBB38\uC2E0\uC6B1\\Desktop\\25Programming-1st\\SBSprogramming1\\3_\uB514\uBC84\uAE45\\main.c",
-              "RelativeToolTip": "3_\uB514\uBC84\uAE45\\main.c",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAADYAAAAWAAAAAAAAAA==",
+              "Title": "4_main.c",
+              "DocumentMoniker": "C:\\Users\\\uBB38\uC2E0\uC6B1\\Desktop\\25Programming-1st\\SBSprogramming1\\4_\uC804\uCC98\uB9AC\uAE30\uC640 \uB9C1\uD0B9\uACFC\uC815\\4_main.c",
+              "RelativeDocumentMoniker": "4_\uC804\uCC98\uB9AC\uAE30\uC640 \uB9C1\uD0B9\uACFC\uC815\\4_main.c",
+              "ToolTip": "C:\\Users\\\uBB38\uC2E0\uC6B1\\Desktop\\25Programming-1st\\SBSprogramming1\\4_\uC804\uCC98\uB9AC\uAE30\uC640 \uB9C1\uD0B9\uACFC\uC815\\4_main.c",
+              "RelativeToolTip": "4_\uC804\uCC98\uB9AC\uAE30\uC640 \uB9C1\uD0B9\uACFC\uC815\\4_main.c",
+              "ViewState": "AgIAAA0AAAAAAAAAAAASwCMAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-10-17T10:46:29.53Z",
+              "WhenOpened": "2025-10-20T14:13:20.938Z",
               "EditorCaption": ""
             }
           ]
