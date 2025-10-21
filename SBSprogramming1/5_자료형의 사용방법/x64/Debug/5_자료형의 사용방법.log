@@ -1,0 +1,7 @@
+﻿  5_main.c
+C:\Users\Administrator\Desktop\25Programming-1st\SBSprogramming1\5_자료형의 사용방법\5_main.c(14,7): warning C4101: 'number1' :참조되지 않은 지역 변수입니다.
+C:\Users\Administrator\Desktop\25Programming-1st\SBSprogramming1\5_자료형의 사용방법\5_main.c(17,7): warning C4101: 'number4' :참조되지 않은 지역 변수입니다.
+C:\Users\Administrator\Desktop\25Programming-1st\SBSprogramming1\5_자료형의 사용방법\5_main.c(18,12): warning C4101: 'number5' :참조되지 않은 지역 변수입니다.
+C:\Users\Administrator\Desktop\25Programming-1st\SBSprogramming1\5_자료형의 사용방법\5_main.c(16,6): warning C4101: 'number3' :참조되지 않은 지역 변수입니다.
+C:\Users\Administrator\Desktop\25Programming-1st\SBSprogramming1\5_자료형의 사용방법\5_main.c(15,8): warning C4101: 'number2' :참조되지 않은 지역 변수입니다.
+  5_자료형의 사용방법.vcxproj -> C:\Users\Administrator\Desktop\25Programming-1st\SBSprogramming1\x64\Debug\5_자료형의 사용방법.exe

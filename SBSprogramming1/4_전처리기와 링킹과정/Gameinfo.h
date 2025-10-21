@@ -17,3 +17,4 @@
 //extern #include <windows.h> // 윈도우 키 입력에 필요한 함수
 
 int BulletMaxCount = 8;
+int FireRate = 0.2f;
