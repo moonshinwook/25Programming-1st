@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\25Programming-1st\\SBSprogramming1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1192AC1C-2C80-4F47-8183-7B5F1AF75C5F}|5_\uC790\uB8CC\uD615\uC758 \uC0AC\uC6A9\uBC29\uBC95\\5_\uC790\uB8CC\uD615\uC758 \uC0AC\uC6A9\uBC29\uBC95.vcxproj|C:\\Users\\Administrator\\Desktop\\25Programming-1st\\SBSprogramming1\\5_\uC790\uB8CC\uD615\uC758 \uC0AC\uC6A9\uBC29\uBC95\\5_main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{1192AC1C-2C80-4F47-8183-7B5F1AF75C5F}|5_\uC790\uB8CC\uD615\uC758 \uC0AC\uC6A9\uBC29\uBC95\\5_\uC790\uB8CC\uD615\uC758 \uC0AC\uC6A9\uBC29\uBC95.vcxproj|solutionrelative:5_\uC790\uB8CC\uD615\uC758 \uC0AC\uC6A9\uBC29\uBC95\\5_main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0ED65D00-4755-47F7-B01D-E039A7CB448E}|1_OT\\1_OT.vcxproj|C:\\Users\\Administrator\\Desktop\\25Programming-1st\\SBSprogramming1\\1_OT\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0ED65D00-4755-47F7-B01D-E039A7CB448E}|1_OT\\1_OT.vcxproj|solutionrelative:1_OT\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{2A0824D4-AB87-4F2F-985D-61133AFE4B5C}|6_\uCF54\uB4DC\uC758 \uD750\uB984 \uC81C\uC5B4\\6_\uCF54\uB4DC\uC758 \uD750\uB984 \uC81C\uC5B4.vcxproj|C:\\Users\\Administrator\\Desktop\\25Programming-1st\\SBSprogramming1\\6_\uCF54\uB4DC\uC758 \uD750\uB984 \uC81C\uC5B4\\6_main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2A0824D4-AB87-4F2F-985D-61133AFE4B5C}|6_\uCF54\uB4DC\uC758 \uD750\uB984 \uC81C\uC5B4\\6_\uCF54\uB4DC\uC758 \uD750\uB984 \uC81C\uC5B4.vcxproj|solutionrelative:6_\uCF54\uB4DC\uC758 \uD750\uB984 \uC81C\uC5B4\\6_main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,28 +26,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\25Programming-1st\\SBSprogramming1\\1_OT\\main.cpp",
-              "RelativeDocumentMoniker": "1_OT\\main.cpp",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\25Programming-1st\\SBSprogramming1\\1_OT\\main.cpp",
-              "RelativeToolTip": "1_OT\\main.cpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-10-21T07:10:46.731Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "5_main.c",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\25Programming-1st\\SBSprogramming1\\5_\uC790\uB8CC\uD615\uC758 \uC0AC\uC6A9\uBC29\uBC95\\5_main.c",
-              "RelativeDocumentMoniker": "5_\uC790\uB8CC\uD615\uC758 \uC0AC\uC6A9\uBC29\uBC95\\5_main.c",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\25Programming-1st\\SBSprogramming1\\5_\uC790\uB8CC\uD615\uC758 \uC0AC\uC6A9\uBC29\uBC95\\5_main.c",
-              "RelativeToolTip": "5_\uC790\uB8CC\uD615\uC758 \uC0AC\uC6A9\uBC29\uBC95\\5_main.c",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAAAJkAAAABAAAAAAAAAA==",
+              "Title": "6_main.c",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\25Programming-1st\\SBSprogramming1\\6_\uCF54\uB4DC\uC758 \uD750\uB984 \uC81C\uC5B4\\6_main.c",
+              "RelativeDocumentMoniker": "6_\uCF54\uB4DC\uC758 \uD750\uB984 \uC81C\uC5B4\\6_main.c",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\25Programming-1st\\SBSprogramming1\\6_\uCF54\uB4DC\uC758 \uD750\uB984 \uC81C\uC5B4\\6_main.c",
+              "RelativeToolTip": "6_\uCF54\uB4DC\uC758 \uD750\uB984 \uC81C\uC5B4\\6_main.c",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAGcAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-10-21T07:03:07.439Z",
+              "WhenOpened": "2025-10-22T07:03:10.659Z",
               "EditorCaption": ""
             }
           ]

@@ -1,0 +1,13 @@
+﻿  6_main.c
+C:\Users\Administrator\Desktop\25Programming-1st\SBSprogramming1\6_코드의 흐름 제어\6_main.c(162,24): warning C4047: '==': 'const char *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\Administrator\Desktop\25Programming-1st\SBSprogramming1\6_코드의 흐름 제어\6_main.c(166,29): warning C4047: '==': 'const char *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\Administrator\Desktop\25Programming-1st\SBSprogramming1\6_코드의 흐름 제어\6_main.c(170,29): warning C4047: '==': 'const char *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\Administrator\Desktop\25Programming-1st\SBSprogramming1\6_코드의 흐름 제어\6_main.c(179,10): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'const char *'입니다.
+C:\Users\Administrator\Desktop\25Programming-1st\SBSprogramming1\6_코드의 흐름 제어\6_main.c(179,10): warning C4313: 'printf': 서식 문자열의 '%d'이(가) const char *' 형식의 인수 1과(와) 충돌합니다.
+C:\Users\Administrator\Desktop\25Programming-1st\SBSprogramming1\6_코드의 흐름 제어\6_main.c(179,10): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'const char *'입니다.
+C:\Users\Administrator\Desktop\25Programming-1st\SBSprogramming1\6_코드의 흐름 제어\6_main.c(179,10): warning C4313: 'printf': 서식 문자열의 '%d'이(가) const char *' 형식의 인수 2과(와) 충돌합니다.
+C:\Users\Administrator\Desktop\25Programming-1st\SBSprogramming1\6_코드의 흐름 제어\6_main.c(181,10): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'const char *'입니다.
+C:\Users\Administrator\Desktop\25Programming-1st\SBSprogramming1\6_코드의 흐름 제어\6_main.c(181,10): warning C4313: 'printf': 서식 문자열의 '%d'이(가) const char *' 형식의 인수 1과(와) 충돌합니다.
+C:\Users\Administrator\Desktop\25Programming-1st\SBSprogramming1\6_코드의 흐름 제어\6_main.c(181,10): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'const char *'입니다.
+C:\Users\Administrator\Desktop\25Programming-1st\SBSprogramming1\6_코드의 흐름 제어\6_main.c(181,10): warning C4313: 'printf': 서식 문자열의 '%d'이(가) const char *' 형식의 인수 2과(와) 충돌합니다.
+  6_코드의 흐름 제어.vcxproj -> C:\Users\Administrator\Desktop\25Programming-1st\SBSprogramming1\x64\Debug\6_코드의 흐름 제어.exe
