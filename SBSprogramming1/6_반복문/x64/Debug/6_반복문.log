@@ -1,0 +1,2 @@
+﻿test.obj : error LNK2005: main이(가) 7_main.obj에 이미 정의되어 있습니다.
+C:\Users\Administrator\Desktop\25Programming-1st\SBSprogramming1\x64\Debug\7_반복문.exe : fatal error LNK1169: 여러 번 정의된 기호가 있습니다.
