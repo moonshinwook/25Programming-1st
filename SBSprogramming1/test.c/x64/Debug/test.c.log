@@ -1,2 +1,7 @@
-﻿  test.c
-  test.c.vcxproj -> C:\Users\Administrator\Desktop\25Programming-1st\SBSprogramming1\x64\Debug\test용.exe
+﻿  test_main.c
+C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\test.c\test_main.c(121,2): warning C4013: 'srand'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\test.c\test_main.c(122,20): warning C4013: 'rand'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\test.c\test_main.c(123,14): warning C4553: '==': 식의 결과가 사용되지 않습니다. '='을(를) 의도했습니까?
+C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\test.c\test_main.c(51,14): warning C4305: '초기화 중': 'int'에서 'char'(으)로 잘립니다.
+C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\test.c\test_main.c(52,20): warning C4305: '초기화 중': 'int'에서 'char'(으)로 잘립니다.
+  test.c.vcxproj -> C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\x64\Debug\test용.exe
