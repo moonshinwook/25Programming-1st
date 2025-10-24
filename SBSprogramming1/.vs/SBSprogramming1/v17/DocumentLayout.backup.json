@@ -1,10 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\uBB38\uC2E0\uC6B1\\Desktop\\Testfile\\25Programming-1st\\SBSprogramming1\\25Programming-1st\\SBSprogramming1\\",
+  "WorkspaceRootPath": "C:\\gitFolder\\25Programming-1st\\SBSprogramming1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{065C61C2-9E4C-40ED-952B-B36F22516998}|7_\uBC18\uBCF5\uBB38\\7_\uBC18\uBCF5\uBB38.vcxproj|C:\\Users\\\uBB38\uC2E0\uC6B1\\Desktop\\Testfile\\25Programming-1st\\SBSprogramming1\\25Programming-1st\\SBSprogramming1\\7_\uBC18\uBCF5\uBB38\\7_main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{065C61C2-9E4C-40ED-952B-B36F22516998}|7_\uBC18\uBCF5\uBB38\\7_\uBC18\uBCF5\uBB38.vcxproj|solutionrelative:7_\uBC18\uBCF5\uBB38\\7_main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C3F15801-6F15-47C2-AD71-9A890763DB66}|8_\uD568\uC218\uC758 \uC120\uC5B8 \uBC0F \uC0AC\uC6A9\\8_\uD568\uC218\uC758 \uC120\uC5B8 \uBC0F \uC0AC\uC6A9.vcxproj|C:\\gitFolder\\25Programming-1st\\SBSprogramming1\\8_\uD568\uC218\uC758 \uC120\uC5B8 \uBC0F \uC0AC\uC6A9\\8_main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C3F15801-6F15-47C2-AD71-9A890763DB66}|8_\uD568\uC218\uC758 \uC120\uC5B8 \uBC0F \uC0AC\uC6A9\\8_\uD568\uC218\uC758 \uC120\uC5B8 \uBC0F \uC0AC\uC6A9.vcxproj|solutionrelative:8_\uD568\uC218\uC758 \uC120\uC5B8 \uBC0F \uC0AC\uC6A9\\8_main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{017EBEDA-5FE5-4999-B1E3-818DE3C78CFF}|test.c\\test.c.vcxproj|C:\\gitFolder\\25Programming-1st\\SBSprogramming1\\test.c\\test_main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{017EBEDA-5FE5-4999-B1E3-818DE3C78CFF}|test.c\\test.c.vcxproj|solutionrelative:test.c\\test_main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +18,40 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "test_main.c",
+              "DocumentMoniker": "C:\\gitFolder\\25Programming-1st\\SBSprogramming1\\test.c\\test_main.c",
+              "RelativeDocumentMoniker": "test.c\\test_main.c",
+              "ToolTip": "C:\\gitFolder\\25Programming-1st\\SBSprogramming1\\test.c\\test_main.c",
+              "RelativeToolTip": "test.c\\test_main.c",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAAAMIAAABqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-10-24T08:06:34.444Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "7_main.c",
-              "DocumentMoniker": "C:\\Users\\\uBB38\uC2E0\uC6B1\\Desktop\\Testfile\\25Programming-1st\\SBSprogramming1\\25Programming-1st\\SBSprogramming1\\7_\uBC18\uBCF5\uBB38\\7_main.c",
-              "RelativeDocumentMoniker": "7_\uBC18\uBCF5\uBB38\\7_main.c",
-              "ToolTip": "C:\\Users\\\uBB38\uC2E0\uC6B1\\Desktop\\Testfile\\25Programming-1st\\SBSprogramming1\\25Programming-1st\\SBSprogramming1\\7_\uBC18\uBCF5\uBB38\\7_main.c",
-              "RelativeToolTip": "7_\uBC18\uBCF5\uBB38\\7_main.c",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
+              "Title": "8_main.c",
+              "DocumentMoniker": "C:\\gitFolder\\25Programming-1st\\SBSprogramming1\\8_\uD568\uC218\uC758 \uC120\uC5B8 \uBC0F \uC0AC\uC6A9\\8_main.c",
+              "RelativeDocumentMoniker": "8_\uD568\uC218\uC758 \uC120\uC5B8 \uBC0F \uC0AC\uC6A9\\8_main.c",
+              "ToolTip": "C:\\gitFolder\\25Programming-1st\\SBSprogramming1\\8_\uD568\uC218\uC758 \uC120\uC5B8 \uBC0F \uC0AC\uC6A9\\8_main.c",
+              "RelativeToolTip": "8_\uD568\uC218\uC758 \uC120\uC5B8 \uBC0F \uC0AC\uC6A9\\8_main.c",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAFgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-10-23T16:13:01.028Z",
+              "WhenOpened": "2025-10-24T07:41:56.898Z",
               "EditorCaption": ""
             }
           ]

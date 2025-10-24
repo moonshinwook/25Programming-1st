@@ -25,6 +25,7 @@
 // 추가 요소 
 // 스테이지 클리어 후 경로 2가지 중 하나 택일 왼쪽 = 1, 오른쪽 = 2 을 누르세요
 // 상태이상 요소, 실명 -> 빗나감, 출혈 -> 0.1 한게임당
+// 스테이지 클리어 후 체력 풀회복, 아이템 선택창 만들기(아이템 공격력 증가 or 방어력 증가)    
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h> // 함수 사용을 위한 헤더
@@ -47,7 +48,7 @@ int main()
 	float BossHealthpoint = 4; // 보스= ♥♥♥♥, 공격력 2
 	float BossAttack = 2;
 	int playerchoice = 0; // 플레이어 가위 바위 보 선택사항
-	int computerchoice = 0; // 컴퓨터 가위 바위 보 선택사항
+	int computerchoice = 0;
 	char Life = '♥';
 	char Emptyheart = '♡';
 
@@ -83,58 +84,74 @@ int main()
 		}
 	}
 
-	//가위 바위 보 판정 및 체력 계산 코드
-
-	if (playerchoice <= 0 || playerchoice > 3)
-	{
-		printf("잘못 입력하였습니다.\n");
-	}
-	else if (playerchoice == computerchoice)
-	{
-		printf("비겼습니다.\n");
-	}
-	else if ((playerchoice == 1 && computerchoice == 3) || (playerchoice == 2 && computerchoice == 1) || (playerchoice == 3 && computerchoice == 2))
-	{
-		printf("승리했습니다.\n");
-		Enemy1Healthpoint--;
-	}
-	else
-	{
-		printf("유저가 패배했습니다.\n");
-		player1Healthpoint--;
-	}
-
 	// stage 1  적1 체력 ♥♥♥ 공격력 1.0
 	printf("스테이지 1 시작!\n");
 	printf("적 체력 ♥♥♥ 공격력 1.0\n");
 	if (Characterchoice == 1)
 	{
-		printf(" 철수 체력 ♥♥♥ 공격력 1.0\n");
+		printf("철수 체력 ♥♥♥ 공격력 1.0\n\n");
 	}
 	else if (Characterchoice == 2)
 	{
-		printf(" 영희 체력 ♥♥ 공격력 1.5\n");
+		printf(" 영희 체력 ♥♥ 공격력 1.5\n\n");
 	}
-	printf("가위(1) 바위(2) 보(3) 중 해당 숫자를 입력하세요 : "); // -> 1, 2, 3을 눌러도 가위 바위 보에 대한 내용이 바뀌지 않음. 
-	scanf("%d", &playerchoice);
+	// 반복문이 필요하지 않을까? -> while반복문 투입 
 
-	srand(time(NULL)); // 난수 생성기 초기화
-	int radomchoice = rand() % 3 + 1; // 1~3 사이의 난수 생성 (1 = 가위, 2 = 바위, 3 = 보)
-	radomchoice == computerchoice;
-	printf("적의 선택: %d\n", radomchoice);
-
-
-	if (player1Healthpoint == 0 || player2Healthpoint == 0) // 플레이어 체력 0이되면 처음부터 게임 다시 시작
+	while (1)
 	{
-		printf("체력이 없어 쓰러졌습니다. ");
-		return 0;
-	}
-	else if (Enemy1Healthpoint == 0)
-	{
-		printf("스테이지 1을 클리어하였습니다.\n ");
+		printf("가위(1) 바위(2) 보(3) 중 해당 숫자를 입력하세요 : "); // -> 1, 2, 3을 눌러도 가위 바위 보에 대한 내용이 바뀌지 않음. 
+		scanf("%d", &playerchoice);
+
+
+		srand(time(NULL)); // 난수 생성기 초기화
+		int computerchoice = rand() % 3 + 1; // 1~3 사이의 난수 생성 (1 = 가위, 2 = 바위, 3 = 보)
+		printf("적의 선택: %d\n\n", computerchoice); // 변수를 computerchoice로 하였을 때 재정의되지 않고 출력이 됌!!
+
+		// 적의 선택까지는 출력이 되는데 이후 판정 출력과 체력 계산 후 출력이 나오지 않는 상황 
+			//가위 바위 보 판정 및 체력 계산 코드
+		// 가위 = 1 바위 = 2 보 = 3
+		if (playerchoice <= 0 || playerchoice > 3)
+		{
+			printf("잘못 입력하였습니다.\n\n");
+		}
+		else if (playerchoice == computerchoice) 
+		{
+			printf("비겼습니다.\n\n");
+		}
+		else if ((playerchoice == 1 && computerchoice == 3) || (playerchoice == 2 && computerchoice == 1) || (playerchoice == 3 && computerchoice == 2))
+		{
+			printf("승리했습니다.\n\n");
+			Enemy1Healthpoint--;
+		}
+		else //값반환이 안됌
+		{
+			printf("패배했습니다.\n\n");
+			player1Healthpoint--;
+		}
+
+		// 플레이어 체력이 0일 때 다시 시작지점으로 이동
+		if (player1Healthpoint == 0 || player2Healthpoint == 0) // 플레이어 체력 0이되면 처음부터 게임 다시 시작
+		{
+			printf("체력이 없어 쓰러졌습니다. ");
+			return 0;
+		}
+		else if (Enemy1Healthpoint == 0)
+		{
+			printf("스테이지 1을 클리어하였습니다.\n ");
+		}
+		
+		// 체력 계산 및 Life가 나와야한다. 
+		// o 승패 결과값이 출력이 안됌!-> 같은 값인데 비겼습니다가 아닌 패배했습니다가 나옴. -> rand 변수값을 computerchoice로 바꾸자 해결!
+
+
+
+
+
 
 	}
+
 	// stage 2  적2 체력 ♥♥ 공격력 1.5
+	// 적2의 체력이 표현되어야 스테이지 2가 시작이 된다.
 	if (Enemy1Healthpoint == 0)
 	{
 		printf("스테이지 2 시작!\n");
@@ -152,6 +169,8 @@ int main()
 		printf("스테이지 1을 클리어하였습니다.\n ");
 
 	}
+
+
 	// stage 3  적1 체력 ♥♥♥♥ 공격력 2.0
 	if (Enemy1Healthpoint == 0 && Enemy2Healthpoint == 0) // 스테이지 1 2 순차적으로 마무리했을 시 보스 스테이지로 이동
 	{
@@ -173,3 +192,4 @@ int main()
 	}
 }
 // 가위 바위 보 로그라이크 Version 1. 0. 0. 10/23
+// 가위 바위 보 로그라이크 Version 1. 0. 1. 10/24 -> 반복문 추가, 가위 바위 보 판정에 대한 내용 위치 수정, rand함수 변수를 computerchoice로 수정.
