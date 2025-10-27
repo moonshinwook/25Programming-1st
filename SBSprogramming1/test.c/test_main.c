@@ -12,20 +12,22 @@
 // 철수, 영희 체력이 0이 되면 다시 캐릭터 선택부터 시작
 
 // 캐릭터 정보
-// 철수의 체력 = ♡♡♡, 3 공격력 1
-// 영희의 체력 = ♡♡, 2 공격력 1.5
-// 적1 = ♡♡♡, 3 공격력 1
-// 적2 = ♡♡♡, 2 공격력 1.5
-// 보스= ♡♡♡♡, 공격력 2
+// 철수의 체력 = ♡♡♡, 30 공격력 10
+// 영희의 체력 = ♡♡, 20 공격력 15
+// 적1 = ♡♡♡, 30 공격력 10
+// 적2 = ♡♡♡, 20 공격력 15
+// 보스= ♡♡♡♡, 40 공격력 20
 // 게임 내 최대체력 ♡♡♡♡가 최대
-// 체력 표시 ♥, 데미지를 입은 체력 
+// 체력 표시 ♥, 데미지를 입은 체력 ♡, 반 체력 ◐ 
 
 // 게임 흐름 : 가위 바위 보를 무엇을 내었는지 표현, 가위 바위 보 한판 후 이김, 짐, 비김 표현, 현재 체력, 현재 적 체력 명시 
 
 // 추가 요소 
 // 스테이지 클리어 후 경로 2가지 중 하나 택일 왼쪽 = 1, 오른쪽 = 2 을 누르세요
-// 상태이상 요소, 실명 -> 빗나감, 출혈 -> 0.1 한게임당
+// 상태이상 요소, 실명 -> 빗나감, 출혈 -> 0.1 승패 1번에 데미지 줌
 // 스테이지 클리어 후 체력 풀회복, 아이템 선택창 만들기(아이템 공격력 증가 or 방어력 증가)    
+
+// 체력에 대한 표현을 변수로 대체하여 표현 ex) healthpoint == 30 -> 30을 변수로 대체
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h> // 함수 사용을 위한 헤더
@@ -58,7 +60,7 @@ int main()
 
 
 	int playerchoice = 0; // 플레이어 가위 바위 보 선택사항
-	int computerchoice = 0;
+	int computerchoice = 0; // 적 가위 바위 보 선택사항
 
 
 	//char Life = '♥';
@@ -73,18 +75,18 @@ int main()
 	printf("캐릭터를 선택하시오\n");
 
 	srand(time(NULL)); // 난수 생성기 초기화 srand(time(NULL));를 매 턴에서 호출하면 같은 초 안에 입력하면 같은 난수가 나올 수 있습니다. 게임 시작 전에 한 번만 호출
-	while (1)
+	while (1) // 전체 while로 묶은 상태
 	{
 		// 다시 프로그램을 돌렸을 때 값 초기화
-		player1Healthpoint = 30; // 철수의 체력 = ♥♥♥, 3 공격력 1
+		player1Healthpoint = 30; // 철수의 체력 = ♥♥♥, 30 공격력 10
 		player1Attack = 10;
-		player2Healthpoint = 20; // 영희의 체력 = ♥♥, 2 공격력 1.5
+		player2Healthpoint = 20; // 영희의 체력 = ♥♥, 20 공격력 15
 		player2Attack = 15;
-		Enemy1Healthpoint = 30; // 적1 = ♥♥♥, 3 공격력 1
+		Enemy1Healthpoint = 30; // 적1 = ♥♥♥, 30 공격력 10
 		Enemy1Attack = 10;
-		Enemy2Healthpoint = 20; // 적2 = ♥♥, 2 공격력 1.5
-		Enemy2Attack = 10;
-		BossHealthpoint = 40; // 보스= ♥♥♥♥, 공격력 2
+		Enemy2Healthpoint = 20; // 적2 = ♥♥, 20 공격력 15
+		Enemy2Attack = 15;
+		BossHealthpoint = 40; // 보스= ♥♥♥♥, 40 공격력 20
 		BossAttack = 20;
 
 		// 캐릭터 선택
@@ -107,7 +109,7 @@ int main()
 		}
 	}
 
-	// stage 1  적1 체력 ♥♥♥ 공격력 1.0
+	// stage 1  적1 체력 ♥♥♥ 공격력 10
 	printf("스테이지 1 시작!\n");
 	printf("적 체력 ♥♥♥(30) 공격력 10\n");
 	if (Characterchoice == 1)
@@ -162,7 +164,6 @@ int main()
 		}
 
 		// 체력 출력 코드
-		// 체력의 1.x 에 대한 표현이 안되는 상황 
 		// 플레이어1 체력 표현 -> 고정 소수점으로 해보기 
 		if (Characterchoice == 1 && player1Healthpoint == 30) { //  체력 30
 			printf("철수 체력 ♥♥♥\n");
@@ -269,7 +270,7 @@ int main()
 		// o 승패 결과값이 출력이 안됌!-> 같은 값인데 비겼습니다가 아닌 패배했습니다가 나옴. -> rand 변수값을 computerchoice로 바꾸자 해결!
 
 		printf("\n");
-		// stage 2  적2 체력 ♥♥ 공격력 1.5 
+		// stage 2  적2 체력 ♥♥ 공격력 15 
 		if (Enemy1Healthpoint == 0 && Enemy2Healthpoint == 20) //적1 체력이 0이면 스테이지2 시작
 		{
 			printf("스테이지 2 시작!\n");
@@ -303,55 +304,55 @@ int main()
 			player2Healthpoint = player2Healthpoint - Enemy2Attack;
 		}
 		// 플레이어1 체력 표현
-		if (Characterchoice == 1 && player1Healthpoint == 30 && Enemy1Healthpoint == 0) { //  체력 3
+		if (Characterchoice == 1 && player1Healthpoint == 30 && Enemy1Healthpoint == 0) { //  체력 30
 			printf("철수 체력 ♥♥♥\n");
 		}
-		else if (Characterchoice == 1 && player1Healthpoint > 20 && player1Healthpoint < 30 && Enemy1Healthpoint == 0) { //  체력 2.x
+		else if (Characterchoice == 1 && player1Healthpoint > 20 && player1Healthpoint < 30 && Enemy1Healthpoint == 0) { //  체력 2x
 			printf("철수 체력 ♥♥◐\n");
 		}
-		else if (Characterchoice == 1 && player1Healthpoint == 20 && Enemy1Healthpoint == 0) { //  체력 2
+		else if (Characterchoice == 1 && player1Healthpoint == 20 && Enemy1Healthpoint == 0) { //  체력 20
 			printf("철수 체력 ♥♥♡\n");
 		}
-		else if (Characterchoice == 1 && player1Healthpoint > 10 && player1Healthpoint < 20 && Enemy1Healthpoint == 0) { //  체력 1.x
+		else if (Characterchoice == 1 && player1Healthpoint > 10 && player1Healthpoint < 20 && Enemy1Healthpoint == 0) { //  체력 1x
 			printf("철수 체력 ♥◐♡\n");
 		}
-		else if (Characterchoice == 1 && player1Healthpoint == 10 && Enemy1Healthpoint == 0) { // 체력 1
+		else if (Characterchoice == 1 && player1Healthpoint == 10 && Enemy1Healthpoint == 0) { // 체력 10
 			printf("철수 체력 ♥♡♡\n");
 		}
-		else if (Characterchoice == 1 && player1Healthpoint > 0 && player1Healthpoint < 10 && Enemy1Healthpoint == 0) { //  체력 1.x
+		else if (Characterchoice == 1 && player1Healthpoint > 0 && player1Healthpoint < 10 && Enemy1Healthpoint == 0) { //  체력 1x
 			printf("철수 체력 ◐♡♡\n");
 		}
 		else if (Characterchoice == 1 && player1Healthpoint == 0 && Enemy1Healthpoint == 0) { // 체력 0 
 			printf("철수 체력 ♡♡♡\n");
 		}
 		// 플레이어2 체력 표현
-		if (Characterchoice == 2 && player2Healthpoint == 20 && Enemy1Healthpoint == 0) { // 체력2
+		if (Characterchoice == 2 && player2Healthpoint == 20 && Enemy1Healthpoint == 0) { // 체력 20
 			printf("영희 체력 ♥♥\n");
 		}
-		else if (Characterchoice == 2 && player2Healthpoint > 10 && player2Healthpoint < 20 && Enemy1Healthpoint == 0) { //  체력 1.x
+		else if (Characterchoice == 2 && player2Healthpoint > 10 && player2Healthpoint < 20 && Enemy1Healthpoint == 0) { //  체력 1x
 			printf("영희 체력 ♥◐\n");
 		}
-		else if (Characterchoice == 2 && player2Healthpoint == 10 && Enemy1Healthpoint == 0) { // 체력 1
+		else if (Characterchoice == 2 && player2Healthpoint == 10 && Enemy1Healthpoint == 0) { // 체력 10
 			printf("영희 체력 ♥♡\n");
 		}
-		else if (Characterchoice == 2 && player2Healthpoint > 0 && player2Healthpoint < 10 && Enemy1Healthpoint == 0) { //  체력 1.x
-			printf("영희 체력 ◐\n");
+		else if (Characterchoice == 2 && player2Healthpoint > 0 && player2Healthpoint < 10 && Enemy1Healthpoint == 0) { //  체력 1x
+			printf("영희 체력 ◐♡\n");
 		}
 		else if (Characterchoice == 2 && player2Healthpoint == 0 && Enemy1Healthpoint == 0) { // 체력 0 
 			printf("영희 체력 ♡♡\n");
 		}
 		// 적2 체력 표현
-		if (Enemy1Healthpoint == 0 && Enemy2Healthpoint == 20) { // 체력2
+		if (Enemy1Healthpoint == 0 && Enemy2Healthpoint == 20) { // 체력 20
 			printf("적 체력 ♥♥\n");
 		}
-		else if (Enemy1Healthpoint == 0 && Enemy2Healthpoint > 10 && Enemy2Healthpoint < 20) { //  체력 1.x
+		else if (Enemy1Healthpoint == 0 && Enemy2Healthpoint > 10 && Enemy2Healthpoint < 20) { //  체력 1x
 			printf("적 체력 ♥◐\n");
 		}
-		else if (Enemy1Healthpoint == 0 && Enemy2Healthpoint == 10) { // 체력 1
+		else if (Enemy1Healthpoint == 0 && Enemy2Healthpoint == 10) { // 체력 10
 			printf("적 체력 ♥♡\n");
 		}
-		else if (Enemy1Healthpoint == 0 && Enemy2Healthpoint > 0 && Enemy2Healthpoint < 10) { //  체력 1.x
-			printf("적 체력 ◐\n");
+		else if (Enemy1Healthpoint == 0 && Enemy2Healthpoint > 0 && Enemy2Healthpoint < 10) { //  체력 1x
+			printf("적 체력 ◐♡\n");
 		}
 		else if (Enemy1Healthpoint == 0 && Enemy2Healthpoint == 0) { // 체력 0 
 			printf("적 체력 ♡♡\n");
@@ -397,66 +398,66 @@ int main()
 			printf("보스 체력 ♥♥♥♥ 공격력 2.0\n");
 		}
 		// 플레이어1 체력 표현
-		if (Characterchoice == 1 && player1Healthpoint <= 30 && Enemy1Healthpoint <= 0 && Enemy2Healthpoint == 0) { //  체력 3
+		if (Characterchoice == 1 && player1Healthpoint <= 30 && Enemy1Healthpoint <= 0 && Enemy2Healthpoint == 0) { //  체력 30
 			printf("철수 체력 ♥♥♥\n");
 		}
-		else if (Characterchoice == 1 && player1Healthpoint > 20 && player1Healthpoint < 30 && Enemy1Healthpoint == 0 && Enemy2Healthpoint == 0) { //  체력 2.x
+		else if (Characterchoice == 1 && player1Healthpoint > 20 && player1Healthpoint < 30 && Enemy1Healthpoint == 0 && Enemy2Healthpoint == 0) { //  체력 20x
 			printf("철수 체력 ♥♥◐\n");
 		}
-		else if (Characterchoice == 1 && player1Healthpoint == 20 && Enemy1Healthpoint <= 0 && Enemy2Healthpoint == 0) { //  체력 2
+		else if (Characterchoice == 1 && player1Healthpoint == 20 && Enemy1Healthpoint <= 0 && Enemy2Healthpoint == 0) { //  체력 20
 			printf("철수 체력 ♥♥♡\n");
 		}
-		else if (Characterchoice == 1 && player1Healthpoint > 10 && player1Healthpoint < 20 && Enemy1Healthpoint == 0 && Enemy2Healthpoint == 0) { //  체력 1.x
+		else if (Characterchoice == 1 && player1Healthpoint > 10 && player1Healthpoint < 20 && Enemy1Healthpoint == 0 && Enemy2Healthpoint == 0) { //  체력 1x
 			printf("철수 체력 ♥◐♡\n");
 		}
-		else if (Characterchoice == 1 && player1Healthpoint == 10 && Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0) { // 체력 1
+		else if (Characterchoice == 1 && player1Healthpoint == 10 && Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0) { // 체력 10
 			printf("철수 체력 ♥♡♡\n");
 		}
-		else if (Characterchoice == 1 && player1Healthpoint > 0 && player1Healthpoint < 10 && Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0) { //  체력 1.x
+		else if (Characterchoice == 1 && player1Healthpoint > 0 && player1Healthpoint < 10 && Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0) { //  체력 x
 			printf("철수 체력 ◐♡♡\n");
 		}
 		else if (Characterchoice == 1 && player1Healthpoint == 0 && Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0) { // 체력 0 
 			printf("철수 체력 ♡♡♡\n");
 		}
 		// 플레이어2 체력 표현
-		if (Characterchoice == 2 && player2Healthpoint == 20 && Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0) { // 체력2
+		if (Characterchoice == 2 && player2Healthpoint == 20 && Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0) { // 체력 20
 			printf("영희 체력 ♥♥\n");
 		}
-		else if (Characterchoice == 2 && player2Healthpoint > 10 && player2Healthpoint < 20 && Enemy1Healthpoint == 0 && Enemy2Healthpoint == 0) { //  체력 1.x
+		else if (Characterchoice == 2 && player2Healthpoint > 10 && player2Healthpoint < 20 && Enemy1Healthpoint == 0 && Enemy2Healthpoint == 0) { //  체력 1x
 			printf("영희 체력 ♥◐\n");
 		}
 		else if (Characterchoice == 2 && player2Healthpoint == 10 && Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0) { // 체력 1
 			printf("영희 체력 ♥♡\n");
 		}
-		else if (Characterchoice == 2 && player2Healthpoint > 0 && player2Healthpoint < 10 && Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0) { //  체력 1.x
-			printf("영희 체력 ◐\n");
+		else if (Characterchoice == 2 && player2Healthpoint > 0 && player2Healthpoint < 10 && Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0) { //  체력 x
+			printf("영희 체력 ◐♡\n");
 		}
 		else if (Characterchoice == 2 && player2Healthpoint == 0 && Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0) { // 체력 0 
 			printf("영희 체력 ♡♡\n");
 		}
 		// 보스 체력 표현
-		if (Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0 && BossHealthpoint == 40) {// 체력 4
+		if (Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0 && BossHealthpoint == 40) {// 체력 40
 			printf("♥♥♥♥\n");
 		}
-		else if (Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0 && BossHealthpoint > 30 && BossHealthpoint < 40) { //  체력 3.x
+		else if (Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0 && BossHealthpoint > 30 && BossHealthpoint < 40) { //  체력 3x
 			printf("체력 ♥♥♥◐\n");
 		}
-		else if (Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0 && BossHealthpoint == 30) { //  체력 3
+		else if (Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0 && BossHealthpoint == 30) { //  체력 30
 			printf("체력 ♥♥♥♡\n");
 		}
-		else if (Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0 && BossHealthpoint > 20 && BossHealthpoint < 30) { //  체력 2.x
+		else if (Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0 && BossHealthpoint > 20 && BossHealthpoint < 30) { //  체력 2x
 			printf("체력 ♥♥◐♡\n");
 		}
-		else if (Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0 && BossHealthpoint == 20) { //  체력 2
+		else if (Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0 && BossHealthpoint == 20) { //  체력 20
 			printf("체력 ♥♥♡♡\n");
 		}
-		else if (Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0 && BossHealthpoint > 10 && BossHealthpoint < 20) { //  체력 1.x
+		else if (Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0 && BossHealthpoint > 10 && BossHealthpoint < 20) { //  체력 1x
 			printf("체력 ♥◐♡♡\n");
 		}
-		else if (Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0 && BossHealthpoint == 10) { // 체력 1
+		else if (Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0 && BossHealthpoint == 10) { // 체력 10
 			printf("체력 ♥♡♡♡\n");
 		}
-		else if (Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0 && BossHealthpoint == 10 && BossHealthpoint > 0) { //  체력 1.x
+		else if (Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0 && BossHealthpoint == 10 && BossHealthpoint > 0) { //  체력 x
 			printf("체력 ◐♡♡♡\n");
 		}
 		else if (Enemy1Healthpoint <= 0 && Enemy2Healthpoint <= 0 && BossHealthpoint == 0) { // 체력 0 
@@ -472,7 +473,7 @@ int main()
 		{
 			printf("보스를 클리어하였습니다.\n ");
 			printf("게임을 완료하였습니다. 축하합니다!!\n ");
-			printf("처음으로 돌아갑니다.\n ");
+			printf("처음 시작으로 돌아갑니다.\n ");
 			system("pause");
 			return 0;
 		}
@@ -489,4 +490,4 @@ int main()
 // 가위 바위 보 로그라이크 Version 1. 0. 0. 10/23
 // 가위 바위 보 로그라이크 Version 1. 0. 1. 10/24 -> 반복문 추가, 가위 바위 보 판정에 대한 내용 위치 수정, rand함수 변수를 computerchoice로 수정, while문 안에 스테이지 3개 넣음.
 // 가위 바위 보 로그라이크 Version 1. 0. 2. 10/26 -> 체력 표현 조건문 추가, 가위 바위 보 판정 코드 위치 수정, 디버깅을 위하여 스테이지 1 따로 묶어둠 2, 보스 스테이지 한번에 묶기
-																				  // -> 플레이어 체력 계산을 위해 int로 변수 부여, 표현은 3.0으로 표시
+																				  // -> 플레이어 체력 계산을 위해 int로 변수 부여
