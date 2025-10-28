@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "9_코드의 범위", "9_코
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test2", "test2용\test2용.vcxproj", "{F7950093-B9E1-4EF0-925B-458DB4C86AE0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "a10_상수와 열거형 사용", "10_상수와 열거형 사용\10_상수와 열거형 사용.vcxproj", "{0EE6474A-0EBB-479E-8FE3-223816E39F0D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -121,6 +123,14 @@ Global
 		{F7950093-B9E1-4EF0-925B-458DB4C86AE0}.Release|x64.Build.0 = Release|x64
 		{F7950093-B9E1-4EF0-925B-458DB4C86AE0}.Release|x86.ActiveCfg = Release|Win32
 		{F7950093-B9E1-4EF0-925B-458DB4C86AE0}.Release|x86.Build.0 = Release|Win32
+		{0EE6474A-0EBB-479E-8FE3-223816E39F0D}.Debug|x64.ActiveCfg = Debug|x64
+		{0EE6474A-0EBB-479E-8FE3-223816E39F0D}.Debug|x64.Build.0 = Debug|x64
+		{0EE6474A-0EBB-479E-8FE3-223816E39F0D}.Debug|x86.ActiveCfg = Debug|Win32
+		{0EE6474A-0EBB-479E-8FE3-223816E39F0D}.Debug|x86.Build.0 = Debug|Win32
+		{0EE6474A-0EBB-479E-8FE3-223816E39F0D}.Release|x64.ActiveCfg = Release|x64
+		{0EE6474A-0EBB-479E-8FE3-223816E39F0D}.Release|x64.Build.0 = Release|x64
+		{0EE6474A-0EBB-479E-8FE3-223816E39F0D}.Release|x86.ActiveCfg = Release|Win32
+		{0EE6474A-0EBB-479E-8FE3-223816E39F0D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
