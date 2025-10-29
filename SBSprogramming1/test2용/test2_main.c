@@ -5,6 +5,7 @@
 #include <time.h> // 컴퓨터 난수 설정을 위한 헤더
 
 // 플레이어와 게임 상태를 관리하는 구조체
+// const static 사용해보기 
 
 // 함수 선언
 void StartBattle();
@@ -22,7 +23,6 @@ int main() {
 		printf("==================================\n");
 
 		StartBattle(); // 게임 시작
-		// Characterchoice(); E0109오류 발생
 
 		printf("게임을 다시 시작하시겠습니까? : (Y / N)  ");
 		scanf(" %c", &RestartChoice);
@@ -154,7 +154,7 @@ void StartBattle() {
 	}
 	printf("----------------------------------\n");
 
-	// 게임 결과 판정
+	// 게임 결과 판정 -> 수정 필요
 	if (player1Healthpoint <= 0 || player2Healthpoint <= 0) {
 		printf("게임 오버! 플레이어가 패배했습니다.\n");
 	}

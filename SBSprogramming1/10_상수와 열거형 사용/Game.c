@@ -10,19 +10,29 @@ bool CheckPlayerIsBoundary()
 {
 	int mapX = CalculateBoundaryX(0);
 	int mapY = CalculateBoundaryY(0);
-	int playerX;
-	int playerY;
+	int playerX = 3; 
+	int playerY = 5;
 
 	// 조건문으로 범위안인가 아닌가 체크해보세요
 
-	return false;
+	if ((playerX >= 0  && playerX < mapX) 
+		&& (playerY >=0 && playerY < mapY))// 어떤 조건일 때 참인가? MAPSIZE X, Y player X Y 비교
+	{
+		printf("플레이어가 경계선 안에 있습니다.\n");
+		return true;
+	}
+	else
+	{
+		printf("플레이어가 경계선 안에 있습니다.\n");
+		return false;
+	}
 }
 
-int CalculateBoundary(int MapOriginX)
+int CalculateBoundaryX(int MapOriginX)
 {
-	return 0;
+	return MapOriginX + MAPSIZE;
 }
-int CalculateBoundary(int MapOriginY)
+int CalculateBoundaryY(int MapOriginY)
 {
-	return 0;
+	return MapOriginY + MAPSIZE;
 }

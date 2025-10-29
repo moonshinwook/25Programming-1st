@@ -5,13 +5,11 @@
 #include <stdbool.h>
 
 
-const static int MAPSIZE;
+const static int MAPSIZE = 10;
 //int PlayerX = 3;
 //int PlayerY = 5;
 //int MapOriginX;
 //int MapOriginY;
-
-
 
 
 bool CheckPlayerIsBoundary();				// <stdbool.h>

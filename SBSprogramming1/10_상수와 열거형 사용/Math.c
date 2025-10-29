@@ -17,12 +17,9 @@ void Test()
 void Test2()
 {
 	static int number = 1;
-	int result = 0;
-	for (int i = 0; i < 10; i++)
-	{
-		number += i;		//number = number + i;¿Í °°´Ù
-	}
-	result = number;
+	int number2 = 1;
+	number++; // number + number + 1;
+	number2++;
 }
 
 void CalculateCircleArea()

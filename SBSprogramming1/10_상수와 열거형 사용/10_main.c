@@ -1,5 +1,6 @@
 #include "Math.h"
 #include <stdbool.h>
+#include "Game.h"
 // 원의 넓이 구하는 코드를 작성해보세요. 
 // double pi(3.141592......) r * r 
 
@@ -21,9 +22,21 @@ extern const double PI;
 
 int main() 
 {
+	if (CheckPlayerIsBoundary()) // 플레이어가 맵안에 있을 때 조건을 함수로 표현, bool의 표현은 if와 같은 격
+	{
+		// 조건 안에 있으면 플레이어가 움직일 수 있다. 
+	}
+
+	else
+	{
+		// 플레이어의 이동을 막는다. 플레이어의 이동 조건 MOVE()
+	}
 
 	Test();
-	Test2();
+	for (int i = 0; i < 3; i++)
+	{
+		Test2();
+	}
 
 	CalculateCircleArea();
 	CalculateCircleDiameter();
