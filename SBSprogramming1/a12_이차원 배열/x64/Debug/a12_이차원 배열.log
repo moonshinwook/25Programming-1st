@@ -1,4 +1,4 @@
 ﻿  12_main.c
-C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\a12_이차원 배열\12_main.c(55,6): warning C4013: '_kbhit'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\a12_이차원 배열\12_main.c(56,11): warning C4013: '_getch'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-  a12_이차원 배열.vcxproj -> C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\x64\Debug\a12_이차원 배열.exe
+C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\a12_이차원 배열\12_main.c(161,7): warning C4013: '_kbhit'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\a12_이차원 배열\12_main.c(162,13): warning C4013: '_getch'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  a12_이차원 배열.vcxproj -> C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\x64\Debug\a12_이차원 배열.exe
