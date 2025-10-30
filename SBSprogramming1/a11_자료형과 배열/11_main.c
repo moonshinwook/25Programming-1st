@@ -1,6 +1,8 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
+
 
 // 어떤 점이 장점이 되는가? 
 // 기존 방식, 새로운 방식 둘다 사용. 
@@ -58,7 +60,7 @@ int main(void)
 	printf("a의 크기 : %llu바이트\n", sizeof(a)); //4바이트
 	printf("numArray의 크기 : %llu개 자료형의 수\n", sizeof(numArray) / sizeof(int)); // 16바이트 
 	printf("numArray2의 크기 : %llu바이트\n", sizeof(numArray2)); // 400바이트
-	printf("numArray3의 크기 : %+llu이트\n", sizeof(numArray3)); // 160바이트
+	printf("numArray3의 크기 : %+llu바이트\n", sizeof(numArray3)); // 160바이트
 	// 배열을 선언하는 방법	
 	// 자료형 이름[] = { };		
 	// 자료형 이름[숫자] = {		}; 갯수가 안맞는 경우
@@ -88,20 +90,19 @@ int main(void)
 
 	// 반복문을 사용해서 문자가 끝이 났는지 확인하는 코드를 작성해봅시다.
 
-	char str[50];
-	int index = 0;
-	printf("문자열 입력 : ");
-	scanf("%s", str); // &를 쓰면 안된다! 왜? 주소 연산자는 변수를 주소로 바꿔주는 것임. str은 주소를 표현하는 것임.
+	//wchar_t str[3];
+	//int index = 0;
+	//printf("문자열 입력 : ");
+	//scanf("%s", str); // &를 쓰면 안된다! 왜? 주소 연산자는 변수를 주소로 바꿔주는 것임. str은 주소를 표현하는 것임.
 
-	// printf("안녕하세요"); 이 코드에는 밑의 while 반복문이 실행되고 있는 것이다.
+	//// printf("안녕하세요"); 이 코드에는 밑의 while 반복문이 실행되고 있는 것이다.
 
-	while (str[index] != '\0') // str들어있는 문자를 모두 출력해라.
-	{
-		printf("%c\n", str[index]);
-		index++;
-	}
+	//while (str[index] != '\0') // str들어있는 문자를 모두 출력해라.
+	//{
+	//	printf("%c\n", str[index]);
+	//	index = index;
+	//}
 	
-
 
 	// char arr1[] = {'H', 'I'} => 문자의 배열
 	// char arr2[] \ {'H', 'I', '\0'}; => 문자열
@@ -136,8 +137,23 @@ int main(void)
 	// 주소의 개념이 있기때문에 어려운 내용임. -> 겜프2에서 포인터에서 다룰 영역이기 때문에 지금 개념을 정리해둬야 한다.
 	
 	IsStrCompare();
-	return 0;
 
 
 
+	char Name[20];
+	printf("가위를 입력하세요 : %s");
+	scanf("%s", Name);
+
+	if (strcmp(Name, "가위") > 0)
+	{
+
+	}
+	else if (strcmp(Name, "가위") == 0)
+	{
+
+	}
+	else if (strcmp(Name, "가위") < 0)
+	{
+
+	}
 }

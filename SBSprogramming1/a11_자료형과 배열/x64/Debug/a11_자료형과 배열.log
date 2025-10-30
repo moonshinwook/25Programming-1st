@@ -1,13 +1,18 @@
 ﻿  11_main.c
-C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\a11_자료형과 배열\11_main.c(19,9): warning C4473: 'printf': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
-      C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\a11_자료형과 배열\11_main.c(19,9):
+C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\a11_자료형과 배열\11_main.c(21,9): warning C4473: 'printf': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
+      C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\a11_자료형과 배열\11_main.c(21,9):
       자리 표시자 및 해당 매개 변수에는 variadic 인수가 1개 필요하지만 0개가 제공되었습니다.
-      C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\a11_자료형과 배열\11_main.c(19,9):
+      C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\a11_자료형과 배열\11_main.c(21,9):
       누락된 variadic 인수 1이(가) 서식 문자열 '%s'에 필요합니다.
   
-C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\a11_자료형과 배열\11_main.c(22,6): warning C4013: 'strcmp'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\a11_자료형과 배열\11_main.c(56,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
-      C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\a11_자료형과 배열\11_main.c(56,9):
+C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\a11_자료형과 배열\11_main.c(58,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+      C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\a11_자료형과 배열\11_main.c(58,9):
       서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
   
-  a11_자료형과 배열.vcxproj -> C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\x64\Debug\a11_자료형과 배열.exe
+C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\a11_자료형과 배열\11_main.c(144,9): warning C4473: 'printf': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
+      C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\a11_자료형과 배열\11_main.c(144,9):
+      자리 표시자 및 해당 매개 변수에는 variadic 인수가 1개 필요하지만 0개가 제공되었습니다.
+      C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\a11_자료형과 배열\11_main.c(144,9):
+      누락된 variadic 인수 1이(가) 서식 문자열 '%s'에 필요합니다.
+  
+  a11_자료형과 배열.vcxproj -> C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\x64\Debug\a11_자료형과 배열.exe
