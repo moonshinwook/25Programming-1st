@@ -1,0 +1,5 @@
+﻿  13_main.c
+C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\a13_포인터에 대한 이해\13_main.c(38,7): warning C4133: '=': 'int *'과(와) 'char *' 사이의 형식이 호환되지 않습니다.
+C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\a13_포인터에 대한 이해\13_main.c(56,7): warning C4133: '=': 'char *'과(와) 'double *const ' 사이의 형식이 호환되지 않습니다.
+C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\a13_포인터에 대한 이해\13_main.c(56,2): error C2166: l-value가 const 개체를 지정합니다.
+C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\a13_포인터에 대한 이해\13_main.c(57,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'double'입니다.

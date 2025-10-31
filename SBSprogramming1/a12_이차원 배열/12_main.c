@@ -40,7 +40,7 @@ void render(char STAGE[MAPH][MAPW + 1]) {
 		printf("%s\n", STAGE[y]); //각 줄의 문자열을 한 줄씩 출력
 	}
 }
-
+void PlayerMove(playerXPtr, playerYPtr);
 
 int main()
 {
@@ -156,6 +156,14 @@ int main()
 	//_kbhit()와 _getch()는 C언어에서 키보드 입력을 실시간으로 처리할 때 자주 사용하는 함수입니다.
 	// 둘 다 표준 C 함수는 아니고, MS - DOS / Windows용 콘솔 함수로, <conio.h> 헤더파일에 들어 있음.
 
+	int playerX = 5;
+	int playerY = 5;
+
+	int* playerXPtr = &playerX;
+	int* playerYPtr = &playerY;
+
+	PlayerMove(playerXPtr, playerYPtr);
+
 	while (1) {
 		// 입력이 있을 때만 처리(WASD 이동, ESC 종료)
 		if (_kbhit()) { 
@@ -180,8 +188,12 @@ int main()
 				// (선택) 아이템 처리: 돈이면 먹고 지우기
 				if (STAGE[ny][nx] == MONEY) {
 					// 점수 증가 같은 로직을 여기에 추가 가능
-					// printf("돈을 주웠다!\n");
+					printf("돈을 주웠다!\n");
 				}
+				// 데이터상으로는 (5,5)
+				// 몬스터는 (5,5)를 가지고 있지만 현재 덧씌워졌을 때 @를 다시 그리라는 명령어가 없기 때문에 사라진 것처럼 보인다. 즉, 몬스터 데이터는 남았지만 눈으로는 명시되지 않는 상황.
+				// 플레이어를 그리면 몬스터의 자리에 덧씌워서 이동하는 원리
+				
 				// 이전 자리 지우고 새 자리로 이동
 				STAGE[playerY][playerX] = ' ';
 				playerX = nx;
@@ -197,6 +209,24 @@ int main()
 	}
 
 	return 0;
+
+	
+}
+void PlayerMove(int* plyerX, int* plyerY)
+{
+	// windows.h kbhit()
+	// 입력받은 코드를 PlayerMove() -> main함수에서 값이 변경되는 것을 받도록 만들어라. 
+	// 조건문만 만들어 주면 언제 x의 값이 바뀔지
+
+
+	*plyerX = *plyerX + 1;
+
+	// scanf
+	// 'w'    -> Y +1
+	// 'S'    -> Y -1
+	// 'D'    -> X -1
+	// 'A'    -> X +1
+
 
 
 }
