@@ -1,4 +1,3 @@
 ﻿  12_main.c
-C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\a12_이차원 배열\12_main.c(169,7): warning C4013: '_kbhit'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\a12_이차원 배열\12_main.c(170,13): warning C4013: '_getch'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-  a12_이차원 배열.vcxproj -> C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\x64\Debug\a12_이차원 배열.exe
+C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\a12_이차원 배열\12_main.c(180,2): error C2449: 파일 범위에 '{'가 있습니다. 함수 헤더가 없는 것 같습니다.
+C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\a12_이차원 배열\12_main.c(248,2): error C2059: 구문 오류: '}'
