@@ -3,7 +3,7 @@
 
 // 1. 포인터 복습
 // int* numPtr = &a;	포인터 선언 방식 자료형(*), Ptr 구별을 위해, &(주소 연산자) 
-// *number // 주소에 저장된 값을 역참조. 
+// *number 주소에 저장된 값을 역참조. 
 
 void Test1(int* xPtr, int* yPtr, int amountX, int amountY);
 void Test2();
