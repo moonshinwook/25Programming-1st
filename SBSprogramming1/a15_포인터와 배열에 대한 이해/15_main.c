@@ -53,10 +53,10 @@ int main()
 
 	// 배열은 포인터다.
 
-	const char* const itemText[3] = { "나무", "바위", "칼" }; 
+	const char* const itemText[3] = { "나무", "바위", "칼" };
 
 	// itemText[0] = "소"; // (우)const가 주소를 못 바꾸게 하는 중
-	printf("itemText0 : %s\n", itemText[0]); 
+	printf("itemText0 : %s\n", itemText[0]);
 	printf("itemText1 : %s\n", itemText[1]);
 	printf("itemText2 : %s\n", itemText[2]);
 
@@ -67,16 +67,16 @@ int main()
 
 	// 배열은 기본적으로 상수 지시 포인터 : 주소를 변경하지 못하는 포인터다. 
 	// 저장할 수 있는 자료형을 상수형으로 표현했다. 
-	 
+
 	const char* ss = "dasdasdasdasdasdadadadasdadasdad";
 
-	
+
 
 	// " " => 리터럴 문자 literal(문자 그대로) 리터럴 숫자 4 // 이러한 타입은 읽기만 가능하게 만들자. (read only)
 	printf("%s\n", ss);
 
 	Test1();
 	Test2();
-	
+
 
 }
