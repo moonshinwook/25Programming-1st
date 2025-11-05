@@ -1,4 +1,5 @@
 #include "Practice.h"
+#include <windows.h>
 
 void Test1()
 {
@@ -41,19 +42,20 @@ void Test2()
 	// 또다른 배열의 주소를 가져오는 포인터를 선언해보세요.
 
 
-	//Func(Group1); -> A, B, C 출력 
-	//Func(Group2); -> A, B, C 출력 
-	//Func(Group3); -> A, B, C 출력 
+	Func(Group1); //-> A, B, C 출력 
+	Func(Group2); //\-> A, B, C 출력 
+	Func(Group3); //-> A, B, C 출력 
 
 
 }
 
-void Func(const char* GroupArray[]) // 배열 크기 무관이라 [] 왜? 어차피 Group1[3]으로 크기가 정해졌으니까 Group1 -> GroupArray -> localGroupArray
+void Func(const char* a[]) // 3을 넣을 필요 x 배열 크기 무관이라 [ ] 왜? 어차피 Group1[3]으로 크기가 정해졌으니까 Group1 -> GroupArray 
 									// 8바이트만 전달된 상태 
 {	
 	for (int i = 0; i < 3; i++)
 	{
-		printf("%s\n", GroupArray[i]);
+		printf("%s\n", a[i]);
 	}
+	
 	
 }

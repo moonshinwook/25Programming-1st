@@ -18,5 +18,13 @@
     <ClCompile Include="test2_main.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="test2함수.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="test2함수.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
