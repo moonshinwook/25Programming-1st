@@ -14,7 +14,7 @@ int BossAttack = 20;
 int playerchoice = 0; // 플레이어 가위 바위 보 선택사항
 int Enemychoice = 0; // 적 가위 바위 보 선택사항
 int Character = 0; // 캐릭터 선택사항 
-int* CharacterPtr = &Character; // 캐릭터 선택사항 포인터
+
 
 
 
@@ -33,9 +33,9 @@ int* CharacterPtr = &Character; // 캐릭터 선택사항 포인터
 
 // 캐릭터 선택 함수
 void StartCharacterchoice() {
-	*CharacterPtr; // Characterchoice 주소 역참조
 
-	printf("전사 =1, 도적 = 2를 누르세요 : \n");
+
+	printf("전사 = 1, 도적 = 2를 누르세요 : \n");
 	scanf("%d", &Character);
 
 	if (Character == 1)
@@ -66,6 +66,15 @@ void StartCharacterchoice() {
 	}
 }
 
+int baseHP = 0;
+int baseATK = 0;
+int* baseHPptr = &baseHP;
+int* baseATKptr = &baseATK;
+
+void SetplayerStat(myJOB, baseHPptr, baseATKptr)
+{
+
+}
 
 
 
@@ -86,7 +95,7 @@ void StartBattle() {
 		printf("스테이지 1 시작!\n");
 		printf("적 체력 ♥♥♥(30) 공격력 10\n");
 		// 전사, 도적 선택에 맞춰 행동 선택사항 출력코드 
-		if (CharacterPtr == 1) {
+		if (Character == 1) {
 			printf("공격(1) 강한 공격(2) 방어(3) 중 해당 숫자를 입력하세요 : ");
 			scanf("%d", &playerchoice);
 		}

@@ -15,10 +15,11 @@ int main() {
 	// 게임 재시작을 위한 while 루프
 	while (1) {
 		printf("==================================\n");
-		printf("          로그라이크 모험게임\n");
+		printf("      로그라이크 모험게임\n");
 		printf("==================================\n");
 
 		StartCharacterchoice(); // 캐릭터 선택
+		SetplayerStat(myJOB, baseHPptr, baseATKptr); // 캐릭터 선택에 따른 스탯 정리, 출력
 		StartBattle(); // 게임 시작
 
 
@@ -80,9 +81,10 @@ int main() {
 
 // 로그라이크 모험 게임 Version 1. 0. 0. 10/28 // 함수 선언 void StartBattle(); void Characterchoice();, Characterchoice함수 관련 오류 발생. 스테이지 1구성 중에 중단
 
-// 로그라이크 모험 게임 Version 1. 0. 0. 11/05 // Characterchoice함수 -> StartCharacterchoice로 수정, 기존 Characterchoice 변수 -> Character로 변경
+// 로그라이크 모험 게임 Version 1. 0. 1. 11/05 // Characterchoice함수 -> StartCharacterchoice로 수정, 기존 Characterchoice 변수 -> Character로 변경
 // 0x00007FFCCDB4C5A6(ucrtbased.dll)에(test2.exe의) 처리되지 않은 예외가 있습니다. 0xC0000005: 0x00007FF6D99811D1 위치를 기록하는 동안 액세스 위반이 발생
-// 캐릭터 선택 1을 누를 시 무한 반복 발생, 2를 누를 시 플레이어 선택사항에 따라서 컴퓨터와 대전
+// 캐릭터 선택 1을 누를 시 무한 반복 발생 -> CharacterPtr -> Character로 수정하여 해결, 2를 누를 시 플레이어 선택사항에 따라서 컴퓨터와 대전
+// 체력 계산 후 현재 체력 명시 코드 필요, 플레이어 현재체력 출력 코드 필요
 
 
 

@@ -1,0 +1,3 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(538,5): warning MSB8028: 중간 디렉터리(x64\Debug\)에 다른 프로젝트(a16_사용자가 정의하는 자료형에 대한 이해(구조체, 열거형).vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
+  Sample.c
+  a16_사용자가 정의하는 자료형에 대한 이해(구조체, 열거형).vcxproj -> C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\x64\Debug\a16_구조체, 열거형.exe
