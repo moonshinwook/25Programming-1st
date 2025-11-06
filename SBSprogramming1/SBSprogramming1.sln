@@ -37,7 +37,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "a14_상수 지시 포인터
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "a15_포인터와 배열", "a15_포인터와 배열에 대한 이해\a15_포인터와 배열에 대한 이해.vcxproj", "{2815CDEB-2C2E-42F9-8D8D-53847B8980F1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "a16_사용자가 정의하는 자료형에 대한 이해(구조체, 열거형)", "a16_사용자가 정의하는 자료형에 대한 이해(구조체, 열거형)\a16_사용자가 정의하는 자료형에 대한 이해(구조체, 열거형).vcxproj", "{F7AD9A1B-9F14-4396-8F4F-EA0D62ACFC13}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "a16_구조체, 열거형", "a16_사용자가 정의하는 자료형에 대한 이해(구조체, 열거형)\a16_사용자가 정의하는 자료형에 대한 이해(구조체, 열거형).vcxproj", "{F7AD9A1B-9F14-4396-8F4F-EA0D62ACFC13}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "a17_구조체에 대한 이해", "a17_구조체에 대한 이해\a17_구조체에 대한 이해.vcxproj", "{4CC58A74-E723-4590-9456-187D07560074}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "a18_Toyproject01", "a18_Toyproject01\a18_Toyproject01.vcxproj", "{772B1A1F-BD59-47D2-9B68-1ABCB332512B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -191,6 +195,22 @@ Global
 		{F7AD9A1B-9F14-4396-8F4F-EA0D62ACFC13}.Release|x64.Build.0 = Release|x64
 		{F7AD9A1B-9F14-4396-8F4F-EA0D62ACFC13}.Release|x86.ActiveCfg = Release|Win32
 		{F7AD9A1B-9F14-4396-8F4F-EA0D62ACFC13}.Release|x86.Build.0 = Release|Win32
+		{4CC58A74-E723-4590-9456-187D07560074}.Debug|x64.ActiveCfg = Debug|x64
+		{4CC58A74-E723-4590-9456-187D07560074}.Debug|x64.Build.0 = Debug|x64
+		{4CC58A74-E723-4590-9456-187D07560074}.Debug|x86.ActiveCfg = Debug|Win32
+		{4CC58A74-E723-4590-9456-187D07560074}.Debug|x86.Build.0 = Debug|Win32
+		{4CC58A74-E723-4590-9456-187D07560074}.Release|x64.ActiveCfg = Release|x64
+		{4CC58A74-E723-4590-9456-187D07560074}.Release|x64.Build.0 = Release|x64
+		{4CC58A74-E723-4590-9456-187D07560074}.Release|x86.ActiveCfg = Release|Win32
+		{4CC58A74-E723-4590-9456-187D07560074}.Release|x86.Build.0 = Release|Win32
+		{772B1A1F-BD59-47D2-9B68-1ABCB332512B}.Debug|x64.ActiveCfg = Debug|x64
+		{772B1A1F-BD59-47D2-9B68-1ABCB332512B}.Debug|x64.Build.0 = Debug|x64
+		{772B1A1F-BD59-47D2-9B68-1ABCB332512B}.Debug|x86.ActiveCfg = Debug|Win32
+		{772B1A1F-BD59-47D2-9B68-1ABCB332512B}.Debug|x86.Build.0 = Debug|Win32
+		{772B1A1F-BD59-47D2-9B68-1ABCB332512B}.Release|x64.ActiveCfg = Release|x64
+		{772B1A1F-BD59-47D2-9B68-1ABCB332512B}.Release|x64.Build.0 = Release|x64
+		{772B1A1F-BD59-47D2-9B68-1ABCB332512B}.Release|x86.ActiveCfg = Release|Win32
+		{772B1A1F-BD59-47D2-9B68-1ABCB332512B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

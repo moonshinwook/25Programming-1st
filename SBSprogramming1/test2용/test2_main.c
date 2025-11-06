@@ -7,6 +7,7 @@
 
 
 
+
 // main함수 
 int main() {
 	char* RestartChoice = 0;
@@ -94,6 +95,7 @@ int main() {
 // 캐릭터 선택 1을 누를 시 무한 반복 발생 -> CharacterPtr -> Character로 수정하여 해결, 2를 누를 시 플레이어 선택사항에 따라서 컴퓨터와 대전
 // 체력 계산 후 현재 체력 명시 코드 필요, 플레이어 현재체력 출력 코드 필요
 
+// 로그라이크 모험 게임 Version 1. 0. 2. 11/06 기존 캐릭터 선택 if문 -> enum(열거형) 수정. 수정에 따라 Startbattle함수에서 selectCharactert에 따른 
 
 
 

@@ -1,5 +1,4 @@
 #include "test2함수.h"
-
 // 변수
 int player1Healthpoint = 30; // 전사의 체력 = ♥♥♥, 30 공격력 10
 int player1Attack = 10;
@@ -14,7 +13,7 @@ int BossAttack = 20;
 int playerchoice = 0; // 플레이어 가위 바위 보 선택사항
 int Enemychoice = 0; // 적 가위 바위 보 선택사항
 int Character = 0; // 캐릭터 선택사항 
-		
+
 
 
 
@@ -34,16 +33,17 @@ void SetplayerStat(JOB selcetCharacter, int* baseHPptr, int* baseATKptr)
 {
 	printf("전사 = 1, 도적 = 2를 누르세요 : \n"); // 숫자 1입력 시 전사, 2입력 시 도적
 	scanf("%d", &selcetCharacter);
-
+	printf("\n");
 	switch (selcetCharacter)
 	{
 	case UNDEFINED:
 		printf("잘못 입력하였습니다\n");
+		// 잘못 입력 시 다시 캐릭터 선택창으로 돌아가도록 해보기.
 		break;
 	case WARRIOR:
 		baseHPptr = 30;
-		baseATKptr = 10;
-		printf("체력 ♥♥♥(%d) 공격력 %d\n", baseHPptr, baseATKptr); // 1입력에 따른 전사 스탯 정리
+		*baseATKptr = 10;
+		printf("체력 ♥♥♥(%d) 공격력 %d\n", *baseHPptr, *baseATKptr); // 1입력에 따른 전사 스탯 정리
 		break;
 	case THIEF:
 		baseHPptr = 20;

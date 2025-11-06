@@ -1,0 +1,6 @@
+﻿  17_main.c
+C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\a17_구조체에 대한 이해\17_main.c(74,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+      C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\a17_구조체에 대한 이해\17_main.c(74,9):
+      서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+  a17_구조체에 대한 이해.vcxproj -> C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\x64\Debug\a17_구조체에 대한 이해.exe
