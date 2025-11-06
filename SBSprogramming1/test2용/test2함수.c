@@ -14,7 +14,7 @@ int BossAttack = 20;
 int playerchoice = 0; // 플레이어 가위 바위 보 선택사항
 int Enemychoice = 0; // 적 가위 바위 보 선택사항
 int Character = 0; // 캐릭터 선택사항 
-
+		
 
 
 
@@ -30,50 +30,27 @@ int Character = 0; // 캐릭터 선택사항
 
 
 
-
-// 캐릭터 선택 함수
-void StartCharacterchoice() {
-
-
-	printf("전사 = 1, 도적 = 2를 누르세요 : \n");
-	scanf("%d", &Character);
-
-	if (Character == 1)
-	{
-		printf(" 당신은 전사입니다. 체력 ♥♥♥(30) 공격력 10\n\n");
-
-	}
-	else if (Character == 2)
-	{
-		printf(" 당신은 도적입니다. 체력 ♥♥(20) 공격력 15\n\n");
-
-	}
-	else
-	{
-		printf(" 1 또는 2 를 입력해주세요.\n\n");
-	}
-
-	//캐릭터 선택에 따른 체력 및 공격력 명시
-	if (Character == 1)
-	{
-		printf(" 당신은 전사입니다. 체력 ♥♥♥(%d) 공격력 %d, \n\n", player1Healthpoint, player1Attack);
-
-	}
-	else if (Character == 2)
-	{
-		printf(" 당신은 도적입니다. 체력 ♥♥(%d) 공격력 %d, \n\n", player2Healthpoint, player2Attack);
-
-	}
-}
-
-int baseHP = 0;
-int baseATK = 0;
-int* baseHPptr = &baseHP;
-int* baseATKptr = &baseATK;
-
-void SetplayerStat(myJOB, baseHPptr, baseATKptr)
+void SetplayerStat(JOB selcetCharacter, int* baseHPptr, int* baseATKptr)
 {
+	printf("전사 = 1, 도적 = 2를 누르세요 : \n"); // 숫자 1입력 시 전사, 2입력 시 도적
+	scanf("%d", &selcetCharacter);
 
+	switch (selcetCharacter)
+	{
+	case UNDEFINED:
+		printf("잘못 입력하였습니다\n");
+		break;
+	case WARRIOR:
+		baseHPptr = 30;
+		baseATKptr = 10;
+		printf("체력 ♥♥♥(%d) 공격력 %d\n", baseHPptr, baseATKptr); // 1입력에 따른 전사 스탯 정리
+		break;
+	case THIEF:
+		baseHPptr = 20;
+		baseATKptr = 15;
+		printf("체력 ♥♥(%d) 공격력 %d\n", baseHPptr, baseATKptr); // 2 입력에 따른 도적 스탯 정리
+		break;
+	}
 }
 
 

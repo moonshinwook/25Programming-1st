@@ -9,24 +9,32 @@
 
 // main함수 
 int main() {
-	char RestartChoice;
-	
+	char* RestartChoice = 0;
+
 
 	// 게임 재시작을 위한 while 루프
 	while (1) {
+		int input = 0;
+		JOB selcetCharacter = input;
+		int baseHP = 0;
+		int baseATK = 0;
+		int* baseHPptr = &baseHP;
+		int* baseATKptr = &baseATK;
+
 		printf("==================================\n");
 		printf("      로그라이크 모험게임\n");
 		printf("==================================\n");
+		printf(" 전사 체력 ♥♥♥(30) 공격력 10\n\n");
+		printf(" 도적 체력 ♥♥(20) 공격력 15\n\n");
 
-		StartCharacterchoice(); // 캐릭터 선택
-		SetplayerStat(myJOB, baseHPptr, baseATKptr); // 캐릭터 선택에 따른 스탯 정리, 출력
+		SetplayerStat(selcetCharacter, baseHPptr, baseATKptr); // 캐릭터 선택에 따른 스탯 정리, 출력
 		StartBattle(); // 게임 시작
 
 
 
 
 		printf("게임을 다시 시작하시겠습니까? : (Y / N)  ");
-		scanf(" %c", &RestartChoice);
+		scanf(" %c", RestartChoice);
 
 		// 입력 버퍼 비우기 (다음 입력에 영향 없도록)
 		int c;

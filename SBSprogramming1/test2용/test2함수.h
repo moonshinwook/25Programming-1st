@@ -6,11 +6,9 @@
 
 typedef enum JOB
 {
+	UNDEFINED,
 	WARRIOR,
-	THIEF,
-	UNDEFINED
-	
-
+	THIEF
 
 
 }JOB;
@@ -23,7 +21,7 @@ typedef enum JOB
 #include <time.h> // 컴퓨터 난수 설정을 위한 헤더
 
 // 함수 선언
-void StartCharacterchoice(); // 시작캐릭터 선택
+void SetplayerStat(selcetCharacter, baseHPptr, baseATKptr);
 void StartBattle(); // 스테이지 1 시작
-void SetplayerStat(myJOB, baseHPptr, baseATKptr);
+
 
