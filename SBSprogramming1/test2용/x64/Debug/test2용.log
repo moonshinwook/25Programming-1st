@@ -1,15 +1,4 @@
-﻿  test2_main.c
-C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2_main.c(46,21): warning C4047: '!=': 'char *'의 간접 참조 수준이 'int'과(와) 다릅니다.
-C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2_main.c(46,45): warning C4047: '!=': 'char *'의 간접 참조 수준이 'int'과(와) 다릅니다.
-  test2함수.c
-C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(44,13): warning C4047: '=': 'int *'의 간접 참조 수준이 'int'과(와) 다릅니다.
-C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(49,13): warning C4047: '=': 'int *'의 간접 참조 수준이 'int'과(와) 다릅니다.
-C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(50,14): warning C4047: '=': 'int *'의 간접 참조 수준이 'int'과(와) 다릅니다.
-C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(51,10): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
-C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(51,10): warning C4313: 'printf': 서식 문자열의 '%d'이(가) int *' 형식의 인수 1과(와) 충돌합니다.
-C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(51,10): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'int *'입니다.
-C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(51,10): warning C4313: 'printf': 서식 문자열의 '%d'이(가) int *' 형식의 인수 2과(와) 충돌합니다.
+﻿  test2함수.c
 C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(62,2): warning C4013: 'srand'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(75,7): error C2100: 'JOB' 형식의 피연산자를 역참조할 수 없습니다.
 C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(86,21): warning C4013: 'rand'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-  코드를 생성하고 있습니다...
-  test2용.vcxproj -> C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\x64\Debug\test2.exe

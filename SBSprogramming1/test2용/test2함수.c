@@ -29,7 +29,7 @@ int Character = 0; // 캐릭터 선택사항
 
 
 
-void SetplayerStat(JOB selcetCharacter, int* baseHPptr, int* baseATKptr)
+void SetplayerStat(JOB selcetCharacter, int* baseHPptr, int* baseATKptr) // 역참조를 활용해 주소 안에 저장되어 있는 값을 출력되도록 하는 코드
 {
 	printf("전사 = 1, 도적 = 2를 누르세요 : \n"); // 숫자 1입력 시 전사, 2입력 시 도적
 	scanf("%d", &selcetCharacter);
@@ -41,14 +41,14 @@ void SetplayerStat(JOB selcetCharacter, int* baseHPptr, int* baseATKptr)
 		// 잘못 입력 시 다시 캐릭터 선택창으로 돌아가도록 해보기.
 		break;
 	case WARRIOR:
-		baseHPptr = 30;
+		*baseHPptr = 30;
 		*baseATKptr = 10;
 		printf("체력 ♥♥♥(%d) 공격력 %d\n", *baseHPptr, *baseATKptr); // 1입력에 따른 전사 스탯 정리
 		break;
 	case THIEF:
-		baseHPptr = 20;
-		baseATKptr = 15;
-		printf("체력 ♥♥(%d) 공격력 %d\n", baseHPptr, baseATKptr); // 2 입력에 따른 도적 스탯 정리
+		*baseHPptr = 20;
+		*baseATKptr = 15;
+		printf("체력 ♥♥(%d) 공격력 %d\n", *baseHPptr, *baseATKptr); // 2 입력에 따른 도적 스탯 정리
 		break;
 	}
 }
@@ -57,7 +57,7 @@ void SetplayerStat(JOB selcetCharacter, int* baseHPptr, int* baseATKptr)
 
 
 
-void StartBattle() {
+void StartBattle(JOB selcetCharacter) {
 
 	srand(time(NULL)); // 난수 생성기 초기화 srand(time(NULL));를 매 턴에서 호출하면 같은 초 안에 입력하면 같은 난수가 나올 수 있습니다. 게임 시작 전에 한 번만 호출
 
@@ -72,7 +72,7 @@ void StartBattle() {
 		printf("스테이지 1 시작!\n");
 		printf("적 체력 ♥♥♥(30) 공격력 10\n");
 		// 전사, 도적 선택에 맞춰 행동 선택사항 출력코드 
-		if (Character == 1) {
+		if (selcetCharacter == 1) {
 			printf("공격(1) 강한 공격(2) 방어(3) 중 해당 숫자를 입력하세요 : ");
 			scanf("%d", &playerchoice);
 		}

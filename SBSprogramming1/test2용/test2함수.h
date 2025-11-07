@@ -21,7 +21,7 @@ typedef enum JOB
 #include <time.h> // 컴퓨터 난수 설정을 위한 헤더
 
 // 함수 선언
-void SetplayerStat(selcetCharacter, baseHPptr, baseATKptr);
+void SetplayerStat(JOB selcetCharacter, int* baseHPptr, int* baseATKptr); // 타입에 대한 선언이 없었음. -> JOB, int*, int*에 대한 타입 붙여줌. -> 붙이지 않은 경우 포인터활용 의미 없음.
 void StartBattle(); // 스테이지 1 시작
 
 
