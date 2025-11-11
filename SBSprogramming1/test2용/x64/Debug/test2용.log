@@ -1,4 +1,6 @@
 ﻿  test2함수.c
-C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(62,2): warning C4013: 'srand'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(75,7): error C2100: 'JOB' 형식의 피연산자를 역참조할 수 없습니다.
-C:\Users\Administrator\Desktop\25_Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(86,21): warning C4013: 'rand'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(61,2): warning C4013: 'srand'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(88,21): warning C4013: 'rand'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(138,26): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(150,28): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  test2용.vcxproj -> C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\x64\Debug\test2.exe

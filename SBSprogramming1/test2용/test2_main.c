@@ -10,32 +10,41 @@
 
 // main함수 
 int main() {
-	char* RestartChoice = 0;
+	char RestartChoice = 0;
 
 
 	// 게임 재시작을 위한 while 루프
 	while (1) {
+
 		int input = 0;
-		JOB selcetCharacter = input;
+		JOB selectCharacter = input;
 		int baseHP = 0;
 		int baseATK = 0;
+		int baseCTR = 0; // 도적 회피반격
+		int baseDEF = 0; //  전사 캐릭터 방어력
+		int basePOISON = 0; // 도적 독칼 공격 
 		int* baseHPptr = &baseHP;
 		int* baseATKptr = &baseATK;
+		int* baseDEFptr = &baseDEF;
+		int* baseCTRptr = &baseCTR;
+		int* basePOISONptr = &basePOISON;
 
 		printf("==================================\n");
 		printf("      로그라이크 모험게임\n");
 		printf("==================================\n");
-		printf(" 전사 체력 ♥♥♥(30) 공격력 10\n\n");
+		printf(" 전사 체력 ♥♥♥(30) 공격력 10 방어력(5)\n\n");
 		printf(" 도적 체력 ♥♥(20) 공격력 15\n\n");
-
-		SetplayerStat(selcetCharacter, baseHPptr, baseATKptr); // 캐릭터 선택에 따른 스탯 정리, 출력
-		StartBattle(); // 게임 시작
-
+		printf("전사 = 1, 도적 = 2를 누르세요 : \n"); // 숫자 1입력 시 전사, 2입력 시 도적
+		scanf("%d", &input);
+		selectCharacter = input; // enum값에 변수값 저장
+		SetplayerStat(selectCharacter, baseHPptr, baseATKptr, baseDEFptr, baseCTRptr, basePOISONptr); // 캐릭터 선택에 따른 스탯 정리, 출력
+		StartBattle(selectCharacter, baseHPptr, baseATKptr, baseDEFptr, baseCTRptr, basePOISONptr); // 게임 시작
+		// StageReward(baseHPptr);
 
 
 
 		printf("게임을 다시 시작하시겠습니까? : (Y / N)  ");
-		scanf(" %c", RestartChoice);
+		scanf(" %c", &RestartChoice);
 
 		// 입력 버퍼 비우기 (다음 입력에 영향 없도록)
 		int c;
@@ -59,7 +68,7 @@ int main() {
 // 전사, 도적 체력이 0이 되면 다시 캐릭터 선택부터 시작
 
 // 캐릭터 정보
-// 전사의 체력 = ♥♥♥, 30 공격력 10
+// 전사의 체력 = ♥♥♥, 30 공격력 10 방어력 5
 // 도적의 체력 = ♥♥, 20 공격력 15
 // 산적1 = ♥♥♥, 30 공격력 10
 // 산적2 = ♥♥♥, 20 공격력 14
@@ -88,14 +97,37 @@ int main() {
 // 체력에 대한 표현을 변수로 대체하여 표현 ex) healthpoint == 30 -> 30을 변수로 대체
 
 
-// 로그라이크 모험 게임 Version 1. 0. 0. 10/28 // 함수 선언 void StartBattle(); void Characterchoice();, Characterchoice함수 관련 오류 발생. 스테이지 1구성 중에 중단
+// 로그라이크 모험 게임 Version 1. 0. 0. 10/28 
+// 함수 선언 void StartBattle(); void Characterchoice();, Characterchoice함수 관련 오류 발생. 스테이지 1구성 중에 중단
 
-// 로그라이크 모험 게임 Version 1. 0. 1. 11/05 // Characterchoice함수 -> StartCharacterchoice로 수정, 기존 Characterchoice 변수 -> Character로 변경
+// 로그라이크 모험 게임 Version 1. 0. 1. 11/05  
+// Characterchoice함수 -> StartCharacterchoice로 수정, 기존 Characterchoice 변수 -> Character로 변경
 // 0x00007FFCCDB4C5A6(ucrtbased.dll)에(test2.exe의) 처리되지 않은 예외가 있습니다. 0xC0000005: 0x00007FF6D99811D1 위치를 기록하는 동안 액세스 위반이 발생
 // 캐릭터 선택 1을 누를 시 무한 반복 발생 -> CharacterPtr -> Character로 수정하여 해결, 2를 누를 시 플레이어 선택사항에 따라서 컴퓨터와 대전
 // 체력 계산 후 현재 체력 명시 코드 필요, 플레이어 현재체력 출력 코드 필요
 
-// 로그라이크 모험 게임 Version 1. 0. 2. 11/06 기존 캐릭터 선택 if문 -> enum(열거형) 수정. 수정에 따라 Startbattle함수에서 selectCharactert에 따른 
+// 로그라이크 모험 게임 Version 1. 0. 2. 11/06 
+// 기존 캐릭터 선택 if문 -> enum(열거형) 수정. 수정에 따라 Startbattle함수에서 selectCharactert에 따른 characterchoice 받아야함.
 
+// 로그라이크 모험 게임 Version 1. 0. 3. 11/10 
+// 열거형 포인터 기존 Chracter -> selectcharacter로 변수 조정, Startbattle while반복문 무한 반복문 탈출용 break; 추가
+// 체력 계산 및 현재 체력 코드 필요. 
+// SetplayerStat(selectCharacter, *baseHPptr, *baseATKptr, *baseDEFptr); 에서 역참조값을 대입하는 경우 주소를 받는 것이 아닌 값을 받는 행위이다.
+// 즉, 주소를 받아야 하는데 값을 받았기 때문에(ptr은 포인터가 가리키는 실제 정수값임) NULL 또는 잘못된 주소로 처리되고, 역참조 시 크래시 발생.
+//  SetplayerStat(selectCharacter, baseHPptr, baseATKptr, baseDEFptr); 로 수정하여 버그 해결
+// selectCharacter를 1 또는 2 선택사항에 대한 입력값이 무시되어 플레이어 선택사항을 건너뛰는 문제 발생. -> selectCharacter = input으로 하여 해결. input = 0 이후 *selectCharacter = input하면
+// NULL 포인터가 되어 읽기 액세스 위반 발생 
+// 캐릭터선택에 따라 행동사항을 다르게 하기 위한 입력값 인식에 문제 발생으로 무한루프 발생 -> void함수에서 input을 main으로 옮긴 후 해결, void에서 지역변수의 개념으로 인식하여 매함수마다 넣어줘야함
+// 그래서 input은 전역변수로 선언
 
+// 로그라이크 모험 게임 Version 1. 0. 4. 11/11 
+// 체력 명시 코드 작성, 30 -15-15 인데 0으로 인식 x 
+// Restartchoice 앞에 %c에 입력 시 주소 연산자 & 추가하여 버그 해결
+// 배열 함수 활용하여 도적일 경우 3번 사항에 회피 발생 코드 추가
+// 회피 시 반격데미지 5 추가를 위해 int baseCTRptr 및 포인터 선언
+// + *baseDEFptr, + Enemy.def 로 방어력까지 고려하여 체력 계산  
+// 도적 독칼 공격에 대한 POISON 선언 및 변수 대입
+// 전사 선택사항과 도적 선택사항, 산적1의 선택사항에 따른 결과 표시 및 체력 계산 코드 변동
+// StageReward 함수 선언 -> 스테이지 클리어에 대한 보상 공격력 4 업 or 전체 체력 회복 추후에 추가 예정
+// 독칼 공격 및 적의 회피 후 체력 계산 코드 출력 이후 현재 체력이 나타나지 않는 현상 발생. 
 
