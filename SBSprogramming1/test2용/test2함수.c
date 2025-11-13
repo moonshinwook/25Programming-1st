@@ -65,7 +65,7 @@ void StartBattle(JOB selectCharacter, int* baseHPptr, int* baseATKptr, int* base
 	int Enemychoice = 0; // 적 가위 바위 보 선택사항
 
 	printf("스테이지 1 시작!\n");
-	printf("산적1이 나타났다!\n");
+	printf("산적1이 나타났다!\n\n");
 	printf("산적1 체력 ♥♥♥(%d) 공격력(%d) 방어력(%d)\n", Enemy1.hp, Enemy1.atk, Enemy1.def);
 	printf("적의 선택 사항 : 공격 = 1, 방어 = 2, 회피 = 3\n\n");
 	// 전투를 위한 while 루프
@@ -87,187 +87,241 @@ void StartBattle(JOB selectCharacter, int* baseHPptr, int* baseATKptr, int* base
 		//적 난수 생성
 		int Enemychoice = rand() % 3 + 1; // 1~3 사이의 난수 생성 (1 = 공격, 2 = 방어, 3 = 회피)
 		printf("적의 선택: %d\n", Enemychoice); // 변수를 computerchoice로 하였을 때 재정의되지 않고 출력이 됌!!
-		
-		//if (Enemychoice == 1)
-		//{
-		//	printf("산적1은 공격을 선택했습니다.");
-		//}
-		//else if (Enemychoice == 2)
-		//{
-		//	printf("산적1은 방어를 선택했습니다.");
-		//}
-		//else if (Enemychoice == 3)
-		//{
-		//	printf("산적1은 회피를 선택했습니다.");
-		//}
-
-
 
 		// 플레이어 공격, 강한 공격, 독칼, 방어, 회피 vs 적의 공격, 방어, 회피에 대한 계산 
-		if (playerchoice <= 0 || playerchoice > 3)
-		{
-			printf("잘못 입력하였습니다.\n\n");
-		}
-		else if (Enemychoice == 1 && playerchoice == 1) // 공격 vs 공격 
-		{
-			printf("서로 공격하여 비겼습니다.\n\n");
-		}
-		else if ((playerchoice == 1 && Enemychoice == 3) || (playerchoice == 1 && Enemychoice == 2)) // 공격 vs 회피 or 공격 vs 방어
-		{
-			printf("공격했습니다.\n\n");
-			if (Enemychoice == 3) {
-				int EnemyMiss = 'a' + (rand() % 8);   // 12.5% 회피율
-				printf("%c\n", Enemychoice);
+			//전사
+			//공격 강한 공격 방어 1 2 3
 
-				if (EnemyMiss == 'c')
-				{
-					printf("산적1이 공격을 회피를 선택했습니다.\n\n");
+			//도적
+			//공격 독칼공격 회피반격 1 2 3
+
+			//산적1
+			//공격 방어 회피 1 2 3
+
+			//전사일 때
+		{
+			//1 vs 1 비김
+			if (selectCharacter == WARRIOR && playerchoice == 1 && Enemychoice == 1) {
+				printf("\n서로 공격하여 비겼습니다.\n");
+			}
+			else if (selectCharacter == WARRIOR && playerchoice == 1 && Enemychoice == 2)
+			{
+				//1 vs 2 산적1방어력 - 전사 공격력
+				printf("\n공격하였습니다.\n");
+
+				Enemy1.hp = Enemy1.hp + Enemy1.def - *baseATKptr;
+			}
+			else if (selectCharacter == WARRIOR && playerchoice == 1 && Enemychoice == 3)
+			{
+				char EnemyMiss = 'a' + (rand() % 5);
+				//1 vs 3 회피 c가 나온 경우 회피
+				if (EnemyMiss == 'c') {
+					printf("a ~ e 중 나온 알파벳 : %c\n", EnemyMiss);
+					printf("\n산적1은 회피하였습니다,\n");
 				}
-				else
-				{
-					printf("산적1 회피 실패...\n\n");
-					Enemy1.hp = Enemy1.hp - *baseATKptr; // 적 회피 실패 시 체력 계산
+				//1 vs 3 회피 c외에 나온 경우 공격력 그대로
+				else if (EnemyMiss != 'c') {
+					printf("a ~ e 중 나온 알파벳 : %c\n", EnemyMiss);
+					printf("\n산적1은 회피에 실패했습니다,\n");
+					Enemy1.hp = Enemy1.hp - *baseATKptr;
 				}
 			}
-
-			Enemy1.hp = Enemy1.hp + Enemy1.def - *baseATKptr; // 적 방어 시 체력 계산
-		}
-		else if ((selectCharacter == WARRIOR && playerchoice == 2 && Enemychoice == 3) || (playerchoice == 2 && Enemychoice == 1)) // 전사인 경우 2번 강공격 선택  vs 방어 or 회피
-		{
-			printf("강하게 공격했습니다.\n\n");
-			Enemy1.hp = Enemy1.hp - *baseATKptr * 1.5; // 강공격에 대한 계산
-			if (Enemychoice == 3) {
-				int EnemyMiss = 'a' + (rand() % 8);   // 12.5% 회피율
-				printf("%c\n", EnemyMiss);
-
-				if (EnemyMiss == 'c')
-				{
-					printf("산적1이 공격을 회피를 선택했습니다.\n\n");
-				}
-				else
-				{
-					printf("산적1 회피 실패...\n\n");
-					Enemy1.hp = Enemy1.hp - *baseATKptr * 1.5; // 적 회피 실패 시 체력 계산
-				}
+			//2 vs 1 강한 공격 데미지, 산적1공격 데미지
+			else if (selectCharacter == WARRIOR && playerchoice == 2 && Enemychoice == 1) {
+				printf("\n산적1의 공격을 뚫고 강하게 공격하였습니다.\n");
+				Enemy1.hp = Enemy1.hp - *baseATKptr * 1.5;
 			}
+			//2 vs 2 강한 공격 - 산적1 방어력
 			else if (selectCharacter == WARRIOR && playerchoice == 2 && Enemychoice == 2)
 			{
-				printf("둘 다 방어만 하면서 쫄아 있다...\n");
+				printf("\n공격하였습니다.\n");
+				Enemy1.hp = Enemy1.hp + Enemy1.def - *baseATKptr * 1.5;
 			}
-			else if (selectCharacter == THIEF && playerchoice == 3 && Enemychoice == 1) // 적 공격 선택과 도적 회피반격 누른 경우
+			else if (selectCharacter == WARRIOR && playerchoice == 2 && Enemychoice == 3)
 			{
-				//char Evasion[] = {'a', 'b', 'c', 'd', 'e'}; // a b c d e 랜덤 뽑기 , c 가 나오는 경우 회피 나머지 꽝
-				//Evasion[rand() % 5];
-				//printf("%c\n", &Evasion);
-				int playerMiss = 'a' + (rand() % 5);   // char 대신 int에 저장
-				printf("%c\n", playerMiss);
+				char EnemyMiss = 'a' + (rand() % 5);
+				//2 vs 3 회피 c가 나온 경우 회피
+				if (EnemyMiss == 'c') {
+					printf("a ~ e 중 나온 알파벳 : %c\n", EnemyMiss);
+					printf("\n산적1은 회피하였습니다,\n");
+				}
+				//2 vs 3 회피 c외에 나온 경우 강한공격력 그대로
+				else if (EnemyMiss != 'c') {
+					printf("a ~ e 중 나온 알파벳 : %c\n", EnemyMiss);
+					printf("\n산적1은 회피에 실패했습니다,\n");
+					Enemy1.hp = Enemy1.hp - *baseATKptr * 1.5;
+				}
+			}
+			//3 vs 1 전사 방어력 - 산적 1 공격력
+			else if (selectCharacter == WARRIOR && playerchoice == 3 && Enemychoice == 1) {
+				printf("\n산적1의 공격을 뚫고 강하게 공격하였습니다.\n");
+				*baseHPptr = *baseHPptr - Enemy1.atk;
+			}
+			
+			//3 vs 2 방어 방어 둘다 쫄아있다
+			else if (selectCharacter == WARRIOR && playerchoice == 3 && Enemychoice == 2)
+			{
+				printf("\n둘 다 방어만 하면서 쫄았다.\n");
+			}
+			//3 vs 3 아무 일도 일어나지 않았다
+			else if (selectCharacter == WARRIOR && playerchoice == 3 && Enemychoice == 3)
+			{
+				printf("\n아무 일도 일어나지 않았다.\n");
+			}
+		}
 
-				if (playerMiss == 'c')
-				{
-					printf("회피 성공!! 반격하였습니다.\n\n");
+		if (selectCharacter == THIEF)
+		{
+			//1 vs 1 비김
+			if (selectCharacter == THIEF && playerchoice == 1 && Enemychoice == 1) {
+				printf("\n서로 공격하여 비겼습니다.\n");
+			}
+			else if (selectCharacter == THIEF && playerchoice == 1 && Enemychoice == 2)
+			{
+				//1 vs 2 산적1방어력 - 도적 공격력
+				printf("\n공격하였습니다.\n");
+				Enemy1.hp = Enemy1.hp + Enemy1.def - *baseATKptr;
+			}
+			else if (selectCharacter == THIEF && playerchoice == 1 && Enemychoice == 3)
+			{
+				char EnemyMiss = 'a' + (rand() % 5);
+				//1 vs 3 회피 c가 나온 경우 회피
+				if (EnemyMiss == 'c') {
+					printf("a ~ e 중 나온 알파벳 : %c\n", EnemyMiss);
+					printf("\n산적1은 회피하였습니다,\n");
+				}
+				//1 vs 3 회피 c외에 나온 경우 공격력 그대로
+				else if (EnemyMiss != 'c') {
+					printf("a ~ e 중 나온 알파벳 : %c\n", EnemyMiss);
+					printf("\n산적1은 회피에 실패했습니다,\n");
+					Enemy1.hp = Enemy1.hp - *baseATKptr;
+				}
+			}
+			//2 vs 1 상태이상 중독, 산적1공격 데미지
+			else if (selectCharacter == THIEF && playerchoice == 2 && Enemychoice == 1) {
+				printf("\n독칼로 공격합니다.\n");
+				printf("산적1에게 공격 받았습니다.\n");
+				printf("산적 1은 중독에 걸렸습니다.\n");
+				Enemy1.hp = Enemy1.hp - *basePOISONptr;
+				*baseHPptr = *baseHPptr - Enemy1.atk;
+			}
+			//2 vs 2 상태이상 중독
+			else if (selectCharacter ==THIEF && playerchoice == 2 && Enemychoice == 2)
+			{
+				printf("\n적의 빈틈에 독칼로 공격했습니다.\n");
+				printf("산적 1은 중독에 걸렸습니다.\n");
+				Enemy1.hp = Enemy1.hp - *basePOISONptr;
+			}
+			else if (selectCharacter == THIEF && playerchoice == 2 && Enemychoice == 3)
+			{
+				char THIEFMiss = 'a' + (rand() % 5);
+				//2 vs 3 회피 c가 나온 경우 회피
+				if (THIEFMiss == 'c') {
+					printf("a ~ e 중 나온 알파벳 : %c\n", THIEFMiss);
+					printf("\n산적1은 회피하였습니다,\n");
+				}
+				//2 vs 3 회피 c외에 나온 경우 강한공격력 그대로
+				else if (THIEFMiss != 'c') {
+					printf("a ~ e 중 나온 알파벳 : %c\n", THIEFMiss);
+					printf("\n산적1은 회피에 실패했습니다,\n");
+					printf("산적 1은 중독에 걸렸습니다.\n");
+					Enemy1.hp = Enemy1.hp - *basePOISONptr;
+				}
+			}
+
+			else if (selectCharacter == THIEF && playerchoice == 3 && Enemychoice == 1) {
+				char THIEFMiss = 'a' + (rand() % 5);
+				//3 vs 1 회피 c가 나온 경우 회피
+				if (THIEFMiss == 'c') {
+					printf("a ~ e 중 나온 알파벳 : %c\n", THIEFMiss);
+					printf("\n도적은 회피하고 반격하였습니다,\n");
 					Enemy1.hp = Enemy1.hp - *baseCTRptr;
 				}
-				else
-				{
-					printf("꽝 ㅠ . ㅠ 회피 실패...\n\n");
+				//3 vs 1 회피 c외에 나온 경우 강한공격력 그대로
+				else if (THIEFMiss != 'c') {
+					printf("a ~ e 중 나온 알파벳 : %c\n", THIEFMiss);
+					printf("\n도적은 회피에 실패했습니다,\n");
 					*baseHPptr = *baseHPptr - Enemy1.atk;
 				}
 			}
-			else if (selectCharacter == THIEF && playerchoice == 2 && Enemychoice == 1 || Enemychoice == 2 && Enemychoice == 2)
+			//3 vs 2 회피 방어 둘다 쫄아있다
+			else if (selectCharacter == THIEF && playerchoice == 3 && Enemychoice == 2)
 			{
-				printf("적을 중독시켰습니다.");
-				Enemy1.hp = Enemy1.hp - 5;
+				printf("아무 일도 일어나지 않았다.\n");
 			}
+			//3 vs 3 회피 회피 아무 일도 일어나지 않았다
 			else if (selectCharacter == THIEF && playerchoice == 3 && Enemychoice == 3)
 			{
-				int playerMiss = 'a' + (rand() % 5);   // char 대신 int에 저장
-				printf("%c\n", playerMiss);
-				int EnemyMiss = 'a' + (rand() % 8);   // 12.5% 회피율
-				printf("%c\n", EnemyMiss);
-
-				if (playerMiss == 'c' && EnemyMiss != 'c')
-				{
-					printf("회피 성공!! 반격하였습니다.\n\n");
-					Enemy1.hp = Enemy1.hp - *baseCTRptr;
-				}
-				else
-				{
-					printf("둘 다 회피할려고 발악 중이다...\n\n");
-				}
-			}
-			else
-			{
-				printf("공격 당했습니다.\n\n");
-				*baseHPptr = *baseHPptr - Enemy1.atk;
-			}
-
-
-			// 현재 체력 명시 코드
-			if (playerchoice > 0 && playerchoice <= 3 && Enemychoice > 0 && Enemychoice <= 3)
-			{
-				if (selectCharacter == WARRIOR) {
-					if (*baseHPptr == 30)
-						printf("나의 체력 : ♥♥♥\n");
-					else if (*baseHPptr > 20 && *baseHPptr < 30)
-						printf("나의 체력 : ♥♥◐\n");
-					else if (*baseHPptr == 20)
-						printf("나의 체력 : ♥♥♡\n");
-					else if (*baseHPptr > 10 && *baseHPptr < 20)
-						printf("나의 체력 : ♥◐♡\n");
-					else if (*baseHPptr == 10)
-						printf("나의 체력 : ♥♡♡\n");
-					else if (*baseHPptr > 0 && *baseHPptr < 10)
-						printf("나의 체력 : ◐♡♡\n");
-					else if (*baseHPptr <= 0)
-						printf("나의 체력 : ♡♡♡\n");
-				}
-
-				if (selectCharacter == THIEF) {
-					if (*baseHPptr == 20)
-						printf("나의 체력 : ♥♥\n");
-					else if (*baseHPptr > 10 && *baseHPptr < 20)
-						printf("나의 체력 : ♥◐\n");
-					else if (*baseHPptr == 10)
-						printf("나의 체력 : ♥♡\n");
-					else if (*baseHPptr > 0 && *baseHPptr < 10)
-						printf("나의 체력 : ◐♡\n");
-					else if (*baseHPptr <= 0)
-						printf("나의 체력 : ♡♡\n");
-				}
-
-				if (Enemy1.hp == 30)
-					printf("산적1의 체력 : ♥♥♥\n");
-				else if (Enemy1.hp > 20 && Enemy1.hp < 30)
-					printf("산적1의 체력 : ♥♥◐\n");
-				else if (Enemy1.hp == 20)
-					printf("산적1의 체력 : ♥♥♡\n");
-				else if (Enemy1.hp > 10 && Enemy1.hp < 20)
-					printf("산적1의 체력 : ♥◐♡\n");
-				else if (Enemy1.hp == 10)
-					printf("산적1의 체력 : ♥♡♡\n");
-				else if (Enemy1.hp > 0 && Enemy1.hp < 10)
-					printf("산적1의 체력 : ◐♡♡\n");
-				else if (Enemy1.hp <= 0)
-					printf("산적1의 체력 : ♡♡♡\n");
-			}
-
-			printf("-----------------------------------------------------------------\n");
-
-			// 게임 결과 판정 -> 수정 필요
-			if (baseHPptr <= 0 || baseHPptr <= 0) {
-				printf("게임 오버! 플레이어가 패배했습니다.\n");
-				break;     // Startbattle while반복문 탈출용
-			}
-			else if (baseHPptr > 0 && Enemy1.hp <= 0)
-			{
-				printf("승리했습니다! 적을 물리쳤습니다.\n");
-				break;    // Startbattle while반복문 탈출용
+				printf("서로 회피하고 난리다.\n");
 			}
 		}
-	}
 
-		//void StageReward(int* baseHPptr);
-		//{
+		// 현재 체력 명시 코드
+		if (playerchoice > 0 && playerchoice <= 3 && Enemychoice > 0 && Enemychoice <= 3)
+		{
+			if (selectCharacter == WARRIOR) {
+				if (*baseHPptr == 30)
+					printf("나의 체력 : ♥♥♥\n");
+				else if (*baseHPptr > 20 && *baseHPptr < 30)
+					printf("나의 체력 : ♥♥◐\n");
+				else if (*baseHPptr == 20)
+					printf("나의 체력 : ♥♥♡\n");
+				else if (*baseHPptr > 10 && *baseHPptr < 20)
+					printf("나의 체력 : ♥◐♡\n");
+				else if (*baseHPptr == 10)
+					printf("나의 체력 : ♥♡♡\n");
+				else if (*baseHPptr > 0 && *baseHPptr < 10)
+					printf("나의 체력 : ◐♡♡\n");
+				else if (*baseHPptr <= 0)
+					printf("나의 체력 : ♡♡♡\n");
+			}
 
-		//}
+			if (selectCharacter == THIEF) {
+				if (*baseHPptr == 20)
+					printf("나의 체력 : ♥♥\n");
+				else if (*baseHPptr > 10 && *baseHPptr < 20)
+					printf("나의 체력 : ♥◐\n");
+				else if (*baseHPptr == 10)
+					printf("나의 체력 : ♥♡\n");
+				else if (*baseHPptr > 0 && *baseHPptr < 10)
+					printf("나의 체력 : ◐♡\n");
+				else if (*baseHPptr <= 0)
+					printf("나의 체력 : ♡♡\n");
+			}
+
+			if (Enemy1.hp == 30)
+				printf("산적1의 체력 : ♥♥♥\n");
+			else if (Enemy1.hp > 20 && Enemy1.hp < 30)
+				printf("산적1의 체력 : ♥♥◐\n");
+			else if (Enemy1.hp == 20)
+				printf("산적1의 체력 : ♥♥♡\n");
+			else if (Enemy1.hp > 10 && Enemy1.hp < 20)
+				printf("산적1의 체력 : ♥◐♡\n");
+			else if (Enemy1.hp == 10)
+				printf("산적1의 체력 : ♥♡♡\n");
+			else if (Enemy1.hp > 0 && Enemy1.hp < 10)
+				printf("산적1의 체력 : ◐♡♡\n");
+			else if (Enemy1.hp <= 0)
+				printf("산적1의 체력 : ♡♡♡\n");
+		}
+
+		printf("-----------------------------------------------------------------\n");
+
+		// 게임 결과 판정 -> 수정 필요
+		if (baseHPptr <= 0 || baseHPptr <= 0) {
+			printf("게임 오버! 플레이어가 패배했습니다.\n");
+			break;     // Startbattle while반복문 탈출용
+		}
+		else if (baseHPptr > 0 && Enemy1.hp <= 0)
+		{
+			printf("승리했습니다! 적을 물리쳤습니다.\n");
+			break;    // Startbattle while반복문 탈출용
+		}
 	}
+}
+
+//void StageReward(int* baseHPptr);
+//{
+
+//}
+	
