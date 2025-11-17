@@ -1,7 +1,13 @@
 ﻿  test2함수.c
-C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(61,2): warning C4013: 'srand'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(88,21): warning C4013: 'rand'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(132,27): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(138,40): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(152,28): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(59,6): warning C4142: 'Debuff': 형식이 재정의되었지만 심각하지는 않습니다.
+      C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.h(44,6):
+      'Debuff' 선언을 참조하십시오.
+  
+C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(65,14): warning C4552: '-': 식의 결과가 사용되지 않습니다.
+C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(76,2): warning C4013: 'srand'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(103,21): warning C4013: 'rand'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(147,27): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(153,40): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(167,28): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\test2용\test2함수.c(359,4): warning C4098: 'StageReward': 'void' 함수에서 값을 반환하고 있습니다.
   test2용.vcxproj -> C:\Users\문신욱\Desktop\Testfile\25Programming-1st\SBSprogramming1\25Programming-1st\25Programming-1st\SBSprogramming1\x64\Debug\test2.exe

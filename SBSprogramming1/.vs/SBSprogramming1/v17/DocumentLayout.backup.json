@@ -22,21 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "test2\uD568\uC218.h",
-              "DocumentMoniker": "C:\\Users\\\uBB38\uC2E0\uC6B1\\Desktop\\Testfile\\25Programming-1st\\SBSprogramming1\\25Programming-1st\\25Programming-1st\\SBSprogramming1\\test2\uC6A9\\test2\uD568\uC218.h",
-              "RelativeDocumentMoniker": "test2\uC6A9\\test2\uD568\uC218.h",
-              "ToolTip": "C:\\Users\\\uBB38\uC2E0\uC6B1\\Desktop\\Testfile\\25Programming-1st\\SBSprogramming1\\25Programming-1st\\25Programming-1st\\SBSprogramming1\\test2\uC6A9\\test2\uD568\uC218.h",
-              "RelativeToolTip": "test2\uC6A9\\test2\uD568\uC218.h",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-10T04:49:23.844Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -45,9 +32,22 @@
               "RelativeDocumentMoniker": "test2\uC6A9\\test2\uD568\uC218.c",
               "ToolTip": "C:\\Users\\\uBB38\uC2E0\uC6B1\\Desktop\\Testfile\\25Programming-1st\\SBSprogramming1\\25Programming-1st\\25Programming-1st\\SBSprogramming1\\test2\uC6A9\\test2\uD568\uC218.c*",
               "RelativeToolTip": "test2\uC6A9\\test2\uD568\uC218.c*",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAAAG4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEYBAAAAAAAAAAAkwFQBAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-11-07T08:42:42.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "test2\uD568\uC218.h",
+              "DocumentMoniker": "C:\\Users\\\uBB38\uC2E0\uC6B1\\Desktop\\Testfile\\25Programming-1st\\SBSprogramming1\\25Programming-1st\\25Programming-1st\\SBSprogramming1\\test2\uC6A9\\test2\uD568\uC218.h",
+              "RelativeDocumentMoniker": "test2\uC6A9\\test2\uD568\uC218.h",
+              "ToolTip": "C:\\Users\\\uBB38\uC2E0\uC6B1\\Desktop\\Testfile\\25Programming-1st\\SBSprogramming1\\25Programming-1st\\25Programming-1st\\SBSprogramming1\\test2\uC6A9\\test2\uD568\uC218.h",
+              "RelativeToolTip": "test2\uC6A9\\test2\uD568\uC218.h",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-10T04:49:23.844Z",
               "EditorCaption": ""
             },
             {
@@ -58,7 +58,7 @@
               "RelativeDocumentMoniker": "test2\uC6A9\\test2_main.c",
               "ToolTip": "C:\\Users\\\uBB38\uC2E0\uC6B1\\Desktop\\Testfile\\25Programming-1st\\SBSprogramming1\\25Programming-1st\\25Programming-1st\\SBSprogramming1\\test2\uC6A9\\test2_main.c",
               "RelativeToolTip": "test2\uC6A9\\test2_main.c",
-              "ViewState": "AgIAABgAAAAAAAAAAAArwCYAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAACsAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-11-07T08:42:35.789Z",
               "EditorCaption": ""

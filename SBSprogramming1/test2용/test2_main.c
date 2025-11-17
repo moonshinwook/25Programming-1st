@@ -28,6 +28,7 @@ int main() {
 		int* baseDEFptr = &baseDEF;
 		int* baseCTRptr = &baseCTR;
 		int* basePOISONptr = &basePOISON;
+		ENEMY Enemy1 = { 0, 0, 0 };
 
 		printf("==================================\n");
 		printf("      로그라이크 모험게임\n");
@@ -38,8 +39,9 @@ int main() {
 		scanf("%d", &input);
 		selectCharacter = input; // enum값에 변수값 저장
 		SetplayerStat(selectCharacter, baseHPptr, baseATKptr, baseDEFptr, baseCTRptr, basePOISONptr); // 캐릭터 선택에 따른 스탯 정리, 출력
+		bool Debuff(Enemy1, basePOISONptr);
 		StartBattle(selectCharacter, baseHPptr, baseATKptr, baseDEFptr, baseCTRptr, basePOISONptr); // 게임 시작
-		// StageReward(baseHPptr);
+		StageReward(Enemy1, baseHPptr, baseATKptr);
 
 
 
@@ -69,9 +71,9 @@ int main() {
 
 // 캐릭터 정보
 // 전사의 체력 = ♥♥♥, 30 공격력 10 방어력 5
-// 도적의 체력 = ♥♥, 20 공격력 15
+// 도적의 체력 = ♥♥, 20 공격력 15 독데미지 3 반격데미지 5
 // 산적1 = ♥♥♥, 30 공격력 10
-// 산적2 = ♥♥♥, 20 공격력 14
+// 산적2 = ♥♥, 20 공격력 14
 // 산적 보스 = ♥♥♥♥, 40 공격력 20 방어력 5 , 체력 20 이하일 때 페이즈 2 : 방어력 7.5로 up  
 // 게임 내 최대체력 ♥♥♥♥가 최대
 // 체력 표시 ♥, 데미지를 입은 체력 ♡, 반 체력 ◐ 
@@ -81,7 +83,7 @@ int main() {
 // 강한 공격: 1.5배만큼 데미지를 준다, 강한 공격은 충전 필요 3턴에 한번 사용 가능 
 // 독칼 공격:  공격력의 절반데미지 + 중독 부여 매턴 시작 시 1.5씩 데미지를 준다. 
 // 회피: 공격을 피할 확률 12.5% 확률
-// 방어: 4만큼 방어
+// 방어력만큼 방어 후 데미지 입음.
 // 스테이지 끝날 시 보상  1. 공격력 증가템 or 2. 체력 회복 요소(full 회복)
 // 게임오버 playerHealthpoint = 0이면 다시 게임 캐릭터 선택으로 돌아감.
 // 게임종료 = Esc or p 버튼
@@ -91,7 +93,7 @@ int main() {
 
 // 추가 요소 
 // 스테이지 클리어 후 경로 2가지 중 하나 택일 왼쪽 = 1, 오른쪽 = 2 을 누르세요
-// 중독데미지는 최대 3중첩, 5턴 동안 유지 
+// 중독데미지는 최대 1중첩, 3턴 동안 유지 
 // 스테이지 클리어 후 체력 풀회복, 아이템 선택창 만들기(아이템 공격력 증가 or 방어력 증가)    
 
 // 체력에 대한 표현을 변수로 대체하여 표현 ex) healthpoint == 30 -> 30을 변수로 대체
@@ -133,4 +135,8 @@ int main() {
 
 // 로그라이크 모험 게임 Version 1. 0. 5. 11/13 
 //  전사, 도적일 때의 경우의 수에 맞게 Startbattle함수의 공격 판정 코드 선언
+
+// 로그라이크 모험 게임 Version 1. 0. 5. 11/17
+// 스테이지 보상 함수 선언
+// bool함수로 상태이상 독 구현 코드 선언, 아직 수정 필요.
 

@@ -56,6 +56,21 @@ void SetplayerStat(JOB selectCharacter, int* baseHPptr, int* baseATKptr, int* ba
 
 }
 
+bool Debuff(ENEMY Enemy1, int* basePOISONptr)
+{
+	{
+		if (Enemy1.hp - *basePOISONptr)
+		{
+			return true;
+			Enemy1.hp - 5;
+		}
+		else
+		{
+			return false;
+		}
+	}
+}
+
 void StartBattle(JOB selectCharacter, int* baseHPptr, int* baseATKptr, int* baseDEFptr, int* baseCTRptr, int* basePOISONptr)
 {
 	srand(time(NULL)); // 난수 생성기 초기화 srand(time(NULL));를 매 턴에서 호출하면 같은 초 안에 입력하면 같은 난수가 나올 수 있습니다. 게임 시작 전에 한 번만 호출
@@ -320,8 +335,30 @@ void StartBattle(JOB selectCharacter, int* baseHPptr, int* baseATKptr, int* base
 	}
 }
 
-//void StageReward(int* baseHPptr);
-//{
+// 스테이지 클리어 보상 
+void StageReward(ENEMY Enemy1, int* baseHPptr, int* baseATKptr)
+{
+	if (Enemy1.hp <= 0 && *baseHPptr > 0); {
+		int stagereward = 0;
+		printf("스테이지 보상을 고르세요. \n");
+		printf("1. 공격력 +4	2. 체력 회복 \n");
+		scanf("%d", &stagereward);
+		if (stagereward == 1)
+		{
+			*baseATKptr = *baseATKptr + 4;
+			printf("공격력이 (%d)이(가) 되었습니다.\n", *baseATKptr);
+		}
+		else if (stagereward == 2)
+		{
+			*baseHPptr = *baseHPptr;
+			printf("체력이 전부 회복되었습니다. 현재 체력 : (%d)\n", *baseHPptr);
+		}
+		else
+		{
+			printf("잘못된 입력입니다. 다시 입력하세요.\n");
+		}
+	}
+}
 
-//}
+
 	
