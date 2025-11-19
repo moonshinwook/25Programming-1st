@@ -69,7 +69,7 @@ void applyPoison(Debuff* df, int damage, int turn) {
 		df->isPoisoned = true;
 		df->remainTurn = 3;
 		df->damage = 5;
-		printf("산적1은 중독에 걸렸다.\n");
+		
 	}
 
 }
@@ -125,7 +125,7 @@ void StartBattle(JOB selectCharacter, int* baseHPptr, int* baseATKptr, int* base
 		//적 난수 생성
 		int Enemychoice = rand() % 3 + 1; // 1~3 사이의 난수 생성 (1 = 공격, 2 = 방어, 3 = 회피)
 		printf("적의 선택: %d\n", Enemychoice); // 변수를 computerchoice로 하였을 때 재정의되지 않고 출력이 됌!!
-		updatePoison(&poison, Enemy1->hp); // 수정 필요.
+		updatePoison(&poison, Enemy1); // 수정 필요.
 		applyPoison(&poison, 5, 3);   // 5 데미지, 3턴 지속
 		// 플레이어 공격, 강한 공격, 독칼, 방어, 회피 vs 적의 공격, 방어, 회피에 대한 계산 
 			//전사

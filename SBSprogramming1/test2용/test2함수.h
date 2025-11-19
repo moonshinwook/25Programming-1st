@@ -41,6 +41,6 @@ typedef struct ENEMY // 산적1  체력, 공격력, 방어력 구조체
 void SetplayerStat(JOB selcetCharacter, int* baseHPptr, int* baseATKptr, int* baseDEFptr, int *baseCTRptr, int* basePOISONptr); // 타입에 대한 선언이 없었음. -> JOB, int*, int*에 대한 타입 붙여줌. -> 붙이지 않은 경우 포인터활용 의미 없음.
 void StartBattle(JOB selcetCharacter, int* baseHPptr, int* baseATKptr, int* baseDEFptr, int *baseCTRptr, int* basePOISONptr); // 스테이지 1 시작
 void StageReward(ENEMY Enemy1, int* baseHPptr, int* baseATKptr); // 스테이지 클리어 보상
-bool Debuff(ENEMY Enemy1, int* basePOISONptr);
+
 
 
