@@ -56,23 +56,46 @@ void SetplayerStat(JOB selectCharacter, int* baseHPptr, int* baseATKptr, int* ba
 
 }
 
-bool Debuff(ENEMY Enemy1, int* basePOISONptr)
-{
-	{
-		if (Enemy1.hp - *basePOISONptr)
-		{
-			return true;
-			Enemy1.hp - 5;
-		}
-		else
-		{
-			return false;
-		}
+// 중독 구조체
+typedef struct {
+	bool isPoisoned;
+	int remainTurn;
+	int damage;
+}Debuff;
+
+// 중독이 걸려있지 않을 때만 중독 부여
+void applyPoison(Debuff* df, int damage, int turn) {
+	if (!df->isPoisoned) {
+		df->isPoisoned = true;
+		df->remainTurn = 3;
+		df->damage = 5;
+		printf("산적1은 중독에 걸렸다.\n");
 	}
+
 }
+
+void updatePoison(Debuff* df, ENEMY Enemy1)
+{
+	if (df->isPoisoned) {
+		Enemy1.hp -= df->damage;
+		df->remainTurn--;
+	
+		printf("중독 피해! (%d 데미지)\n", df->damage);
+
+		if (df->remainTurn <= 0) {
+			df->isPoisoned = false;
+			printf("산적 1의 중독이 사라졌다.\n");
+		}
+	
+	}
+
+}
+
+
 
 void StartBattle(JOB selectCharacter, int* baseHPptr, int* baseATKptr, int* baseDEFptr, int* baseCTRptr, int* basePOISONptr)
 {
+	Debuff poison = { false, 0, 0 }; // 상태이상 없는 상태
 	srand(time(NULL)); // 난수 생성기 초기화 srand(time(NULL));를 매 턴에서 호출하면 같은 초 안에 입력하면 같은 난수가 나올 수 있습니다. 게임 시작 전에 한 번만 호출
 	ENEMY Enemy1 = { 30, 10, 5 };  // 산적1 스탯정리, 구조체 호출
 
@@ -102,7 +125,8 @@ void StartBattle(JOB selectCharacter, int* baseHPptr, int* baseATKptr, int* base
 		//적 난수 생성
 		int Enemychoice = rand() % 3 + 1; // 1~3 사이의 난수 생성 (1 = 공격, 2 = 방어, 3 = 회피)
 		printf("적의 선택: %d\n", Enemychoice); // 변수를 computerchoice로 하였을 때 재정의되지 않고 출력이 됌!!
-
+		updatePoison(&poison, Enemy1->hp); // 수정 필요.
+		applyPoison(&poison, 5, 3);   // 5 데미지, 3턴 지속
 		// 플레이어 공격, 강한 공격, 독칼, 방어, 회피 vs 적의 공격, 방어, 회피에 대한 계산 
 			//전사
 			//공격 강한 공격 방어 1 2 3
