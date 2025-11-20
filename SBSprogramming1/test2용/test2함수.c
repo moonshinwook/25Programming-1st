@@ -83,7 +83,7 @@ void updatePoison(Debuff* df, ENEMY Enemy1, int* playerchoiceptr, JOB selectChar
 			df->debuffed = false;
 			printf("산적 1의 중독이 사라졌다.\n");
 		}
-		else if (df->debuffed && selectCharacter == THIEF && *playerchoiceptr == 2) { // 독 중첩이 1만 되도록 하기 위한 조건 필요
+		else if (df->debuffed && selectCharacter == THIEF) { // 독 중첩이 1만 되도록 하기 위한 조건 필요
 			printf("이미 중독에 걸려있습니다");
 		}
 	
