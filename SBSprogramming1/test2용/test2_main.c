@@ -38,8 +38,7 @@ int main() {
 		printf("전사 = 1, 도적 = 2를 누르세요 : \n"); // 숫자 1입력 시 전사, 2입력 시 도적
 		scanf("%d", &input);
 		selectCharacter = input; // enum값에 변수값 저장
-		SetplayerStat(selectCharacter, baseHPptr, baseATKptr, baseDEFptr, baseCTRptr, basePOISONptr); // 캐릭터 선택에 따른 스탯 정리, 출력
-		bool Debuff(Enemy1, basePOISONptr);
+		SetplayerStat(selectCharacter, baseHPptr, baseATKptr, baseDEFptr, baseCTRptr, basePOISONptr); // 캐릭터 선택에 따른 스탯 정리, 출력6
 		StartBattle(selectCharacter, baseHPptr, baseATKptr, baseDEFptr, baseCTRptr, basePOISONptr); // 게임 시작
 		StageReward(Enemy1, baseHPptr, baseATKptr);
 

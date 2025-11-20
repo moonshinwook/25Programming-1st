@@ -50,41 +50,41 @@ void SetplayerStat(JOB selectCharacter, int* baseHPptr, int* baseATKptr, int* ba
 		*baseCTRptr = 5; // COUNTERATTACK(반격)
 		printf("체력 ♥♥(%d) 공격력(%d), 독칼공격(%d), 회피반격(%d)\n\n", *baseHPptr, *baseATKptr, *basePOISONptr, *baseCTRptr); // 2 입력에 따른 도적 스탯 정리
 		break;
+	default:
+		printf("잘못된 입력입니다.\n");
+		return;
+
 	}
 
 
 
 }
-
-// 중독 구조체
-typedef struct {
-	bool isPoisoned;
-	int remainTurn;
-	int damage;
-}Debuff;
 
 // 중독이 걸려있지 않을 때만 중독 부여
 void applyPoison(Debuff* df, int damage, int turn) {
-	if (!df->isPoisoned) {
-		df->isPoisoned = true;
+	if (!df->debuffed) {// 상태이상이 없는 상태 && 적에게 플레이어가 도적으로 독칼 공격 성공했을 때 중독에 걸리게끔 하기
+		df->debuffed = true;
 		df->remainTurn = 3;
 		df->damage = 5;
-		
+		printf("산적1은 중독에 걸렸다.\n");
 	}
 
 }
 
-void updatePoison(Debuff* df, ENEMY Enemy1)
+void updatePoison(Debuff* df, ENEMY Enemy1, int* playerchoiceptr, JOB selectCharacter)
 {
-	if (df->isPoisoned) {
+	if (df->debuffed) {
 		Enemy1.hp -= df->damage;
 		df->remainTurn--;
 	
 		printf("중독 피해! (%d 데미지)\n", df->damage);
 
 		if (df->remainTurn <= 0) {
-			df->isPoisoned = false;
+			df->debuffed = false;
 			printf("산적 1의 중독이 사라졌다.\n");
+		}
+		else if (df->debuffed && selectCharacter == THIEF && *playerchoiceptr == 2) { // 독 중첩이 1만 되도록 하기 위한 조건 필요
+			printf("이미 중독에 걸려있습니다");
 		}
 	
 	}
@@ -99,7 +99,8 @@ void StartBattle(JOB selectCharacter, int* baseHPptr, int* baseATKptr, int* base
 	srand(time(NULL)); // 난수 생성기 초기화 srand(time(NULL));를 매 턴에서 호출하면 같은 초 안에 입력하면 같은 난수가 나올 수 있습니다. 게임 시작 전에 한 번만 호출
 	ENEMY Enemy1 = { 30, 10, 5 };  // 산적1 스탯정리, 구조체 호출
 
-	int playerchoice = 0; // 플레이어 가위 바위 보 선택사항
+	int* playerchoice = 0; // 플레이어 가위 바위 보 선택사항
+	int playerchoiceptr = &playerchoice;
 	int Enemychoice = 0; // 적 가위 바위 보 선택사항
 
 	printf("스테이지 1 시작!\n");
@@ -124,9 +125,12 @@ void StartBattle(JOB selectCharacter, int* baseHPptr, int* baseATKptr, int* base
 
 		//적 난수 생성
 		int Enemychoice = rand() % 3 + 1; // 1~3 사이의 난수 생성 (1 = 공격, 2 = 방어, 3 = 회피)
-		printf("적의 선택: %d\n", Enemychoice); // 변수를 computerchoice로 하였을 때 재정의되지 않고 출력이 됌!!
-		updatePoison(&poison, Enemy1); // 수정 필요.
-		applyPoison(&poison, 5, 3);   // 5 데미지, 3턴 지속
+		printf("적의 선택: %d\n", Enemychoice); 
+		if (selectCharacter == THIEF && playerchoice == 2) {
+			applyPoison(&poison, &Enemy1, 3);
+		}   // 5 데미지, 3턴 지속
+		updatePoison(&poison, Enemy1, playerchoiceptr, selectCharacter); 
+
 		// 플레이어 공격, 강한 공격, 독칼, 방어, 회피 vs 적의 공격, 방어, 회피에 대한 계산 
 			//전사
 			//공격 강한 공격 방어 1 2 3
@@ -239,8 +243,7 @@ void StartBattle(JOB selectCharacter, int* baseHPptr, int* baseATKptr, int* base
 			//2 vs 1 상태이상 중독, 산적1공격 데미지
 			else if (selectCharacter == THIEF && playerchoice == 2 && Enemychoice == 1) {
 				printf("\n독칼로 공격합니다.\n");
-				printf("산적1에게 공격 받았습니다.\n");
-				printf("산적 1은 중독에 걸렸습니다.\n");
+				printf("산적1에게 독칼공격을 받았습니다.\n");
 				Enemy1.hp = Enemy1.hp - *basePOISONptr;
 				*baseHPptr = *baseHPptr - Enemy1.atk;
 			}
@@ -248,7 +251,6 @@ void StartBattle(JOB selectCharacter, int* baseHPptr, int* baseATKptr, int* base
 			else if (selectCharacter ==THIEF && playerchoice == 2 && Enemychoice == 2)
 			{
 				printf("\n적의 빈틈에 독칼로 공격했습니다.\n");
-				printf("산적 1은 중독에 걸렸습니다.\n");
 				Enemy1.hp = Enemy1.hp - *basePOISONptr;
 			}
 			else if (selectCharacter == THIEF && playerchoice == 2 && Enemychoice == 3)
@@ -263,7 +265,7 @@ void StartBattle(JOB selectCharacter, int* baseHPptr, int* baseATKptr, int* base
 				else if (THIEFMiss != 'c') {
 					printf("a ~ e 중 나온 알파벳 : %c\n", THIEFMiss);
 					printf("\n산적1은 회피에 실패했습니다,\n");
-					printf("산적 1은 중독에 걸렸습니다.\n");
+					printf("산적 1은 독칼 공격을 받았습니다.\n");
 					Enemy1.hp = Enemy1.hp - *basePOISONptr;
 				}
 			}

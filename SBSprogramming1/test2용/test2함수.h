@@ -1,8 +1,16 @@
 #pragma once
+#include <stdbool.h>
 
 #ifndef JOB_H // JOB_H가 정의가 안되어있다면 밑의 구조체를 이용해라
 
 #define JOB_H // define
+
+// 중독 구조체
+typedef struct {
+	bool debuffed;
+	int remainTurn;
+	int damage;
+}Debuff;
 
 typedef enum JOB
 {
